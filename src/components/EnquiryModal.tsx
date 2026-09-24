@@ -95,32 +95,51 @@ const EnquiryModalDialog: React.FC<ModalProps> = ({ isOpen, selectedCategory, on
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
 
     setIsSubmitting(true);
 
-    // Simulate API network submission
-    setTimeout(() => {
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          subject: `Enquiry: ${formData.category} (${formData.companyName} - ${formData.country})`,
+          message: formData.message,
+        }),
+      });
+
+      if (res.ok) {
+        setIsSuccess(true);
+        setTimeout(() => {
+          setIsSuccess(false);
+          setFormData({
+            fullName: "",
+            companyName: "",
+            email: "",
+            phone: "",
+            country: "",
+            category: "pharmaceuticals",
+            message: "",
+            file: null,
+            consent: false,
+          });
+          onClose();
+        }, 2500);
+      } else {
+        alert("Failed to send inquiry. Please try again.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Error sending inquiry.");
+    } finally {
       setIsSubmitting(false);
-      setIsSuccess(true);
-      setTimeout(() => {
-        setIsSuccess(false);
-        setFormData({
-          fullName: "",
-          companyName: "",
-          email: "",
-          phone: "",
-          country: "",
-          category: "pharmaceuticals",
-          message: "",
-          file: null,
-          consent: false,
-        });
-        onClose();
-      }, 3000);
-    }, 1200);
+    }
   };
 
   return (
