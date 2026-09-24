@@ -1,26 +1,143 @@
 @import "tailwindcss";
 
 :root {
+  --primary-blue: #123f91;
+  --secondary-blue: #2468c9;
+  --deep-navy: #092b63;
+  --medical-green: #3fa56b;
+  --light-green: #eaf7ef;
+  --light-blue: #eef5ff;
+  --dark-text: #1d2939;
+  --body-text: #667085;
+  --muted-text: #98a2b3;
+  --border-color: #e4e7ec;
+  --white: #ffffff;
+  --off-white: #f8fafc;
+
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1d2939;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --color-primary-blue: #123f91;
+  --color-secondary-blue: #2468c9;
+  --color-deep-navy: #092b63;
+  --color-medical-green: #3fa56b;
+  --color-light-green: #eaf7ef;
+  --color-light-blue: #eef5ff;
+  --color-dark-text: #1d2939;
+  --color-body-text: #667085;
+  --color-muted-text: #98a2b3;
+  --color-border-color: #e4e7ec;
+  --color-off-white: #f8fafc;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--white);
+  color: var(--dark-text);
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-poppins), var(--font-inter), sans-serif;
+  color: var(--deep-navy);
+}
+
+h1 {
+  font-size: clamp(2.2rem, 4.5vw, 4.2rem);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  line-height: 1.18;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 1.35rem;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.container-custom {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* Feature Card Hover Effects */
+.feature-card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 30px -10px rgba(18, 63, 145, 0.08);
+  border-color: rgba(36, 104, 201, 0.3);
+}
+
+.product-card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 36px -12px rgba(9, 43, 99, 0.12);
+}
+
+.image-wrapper {
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.04);
+}
+
+/* Modal animation */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-modal {
+  animation: modalFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
