@@ -37,10 +37,15 @@ export async function POST(req: Request) {
       },
     });
 
+    // Build recipient list dynamically (sends to RECIPIENT_EMAIL, GMAIL_USER, and fallback without duplicate emails)
+    const recipientList = Array.from(
+      new Set([recipientEmail, gmailUser, "priyanpharmaceuticals@gmail.com"].filter(Boolean))
+    );
+
     const mailOptions = {
       from: `"${name}" <${gmailUser}>`,
       replyTo: email,
-      to: [recipientEmail, "priyanpharmaceuticals@gmail.com"],
+      to: recipientList,
       subject: subject ? `Contact Form: ${subject}` : `New Inquiry from ${name} - Priyan Pharmaceuticals`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px;">
