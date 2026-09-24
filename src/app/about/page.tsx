@@ -23,25 +23,24 @@ export default function AboutPage() {
       
       {/* 1. HERO BREADCRUMB BANNER */}
       <section className="relative w-full h-[220px] md:h-[280px] bg-[#092b63] text-white overflow-hidden flex items-center justify-center">
-        {/* Background Image with Dark Blue Tint */}
         <Image
           src="/images/medicines.jpg"
           alt="About Us Banner Background"
           fill
-          className="object-cover opacity-25"
+          className="object-cover opacity-30"
         />
         <div className="absolute inset-0 bg-[#092b63]/85" />
 
-        <div className="container-custom relative z-10 text-center space-y-3">
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-wide uppercase">
+        <div className="container-custom relative z-20 text-center space-y-3">
+          <h1 className="text-3xl md:text-5xl font-extrabold !text-white tracking-wider uppercase drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">
             About Us
           </h1>
-          <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-slate-300 font-semibold uppercase tracking-wider">
-            <Link href="/" className="hover:text-amber-400 transition-colors">
-              Home
+          <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-white font-semibold uppercase tracking-wider">
+            <Link href="/" className="text-white hover:text-amber-400 transition-colors">
+              HOME
             </Link>
-            <ChevronRight className="w-4 h-4 text-amber-500" />
-            <span className="text-amber-400">About Us</span>
+            <ChevronRight className="w-4 h-4 text-amber-400" />
+            <span className="text-amber-400 font-bold">ABOUT US</span>
           </div>
         </div>
       </section>
