@@ -18,7 +18,7 @@ export default function QualityPage() {
             <span className="text-xs font-bold uppercase tracking-widest text-[#3fa56b]">
               REGULATORY RESPONSIBILITY
             </span>
-            <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+            <h1 className="text-3xl md:text-5xl font-extrabold text-white tracking-wide uppercase drop-shadow-md">
               Quality & Regulatory Compliance
             </h1>
             <p className="text-base md:text-lg text-slate-200 leading-relaxed">
