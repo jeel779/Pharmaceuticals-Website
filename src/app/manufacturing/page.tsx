@@ -12,22 +12,22 @@ export default function ManufacturingPage() {
   const categories = [
     {
       title: "Tablets and Capsules",
-      image: "/images/Tablets&Capsules.jpg",
+      image: "/images/manufacturing/Tablets&Capsules.jpg",
       href: "/products/pharmaceuticals",
     },
     {
       title: "Injections",
-      image: "/images/Injections1.jpg",
+      image: "/images/manufacturing/Injections1.jpg",
       href: "/products/pharmaceuticals",
     },
     {
       title: "MDS",
-      image: "/images/MDS1.jpg",
+      image: "/images/manufacturing/MDS1.jpg",
       href: "/products/surgical-products",
     },
     {
       title: "Syrup and Suspensions",
-      image: "/images/Syrup&Suspensions.jpg",
+      image: "/images/manufacturing/Syrup&Suspensions.jpg",
       href: "/products/pharmaceuticals",
     },
   ];
@@ -35,18 +35,18 @@ export default function ManufacturingPage() {
   return (
     <div className="w-full bg-white text-slate-800">
       
-      {/* 1. HERO BREADCRUMB BANNER */}
-      <section className="relative w-full h-[220px] md:h-[280px] bg-[#092b63] text-white overflow-hidden flex items-center justify-center">
+      {/* 1. HERO BREADCRUMB BANNER USING BACKGROUND IMAGE */}
+      <section className="relative w-full h-[180px] sm:h-[220px] md:h-[250px] bg-[#092b63] text-white overflow-hidden flex items-center justify-center">
         <Image
-          src="/images/medicines.jpg"
+          src="/images/background image.jpg"
           alt="Manufacturing Banner Background"
           fill
-          className="object-cover opacity-30"
+          className="object-cover opacity-35"
         />
-        <div className="absolute inset-0 bg-[#092b63]/85" />
+        <div className="absolute inset-0 bg-[#092b63]/80" />
 
-        <div className="container-custom relative z-20 text-center space-y-3">
-          <h1 className="text-3xl md:text-5xl font-extrabold !text-white tracking-wider uppercase drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">
+        <div className="container-custom relative z-20 text-center space-y-2">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold !text-white tracking-wider uppercase drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">
             Manufacturing
           </h1>
           <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-white font-semibold uppercase tracking-wider">

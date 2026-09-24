@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ShieldCheck, CheckCircle2, FileCheck, Award, Microscope, ClipboardCheck, ArrowRight } from "lucide-react";
+import { ShieldCheck, CheckCircle2, FileCheck, Award, Microscope, ClipboardCheck, ArrowRight, ChevronRight } from "lucide-react";
 
 export const metadata = {
   title: "Quality & Compliance | Priyan Pharmaceuticals",
@@ -12,18 +12,25 @@ export default function QualityPage() {
   return (
     <div className="w-full">
       {/* Hero Banner */}
-      <section className="bg-gradient-to-r from-[#092b63] to-[#123f91] text-white py-16 md:py-20">
-        <div className="container-custom">
-          <div className="max-w-3xl space-y-4">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#3fa56b]">
-              REGULATORY RESPONSIBILITY
-            </span>
-            <h1 className="text-3xl md:text-5xl font-extrabold text-white tracking-wide uppercase drop-shadow-md">
-              Quality & Regulatory Compliance
-            </h1>
-            <p className="text-base md:text-lg text-slate-200 leading-relaxed">
-              We believe that quality, transparency, and regulatory responsibility are essential to building long-term healthcare partnerships globally.
-            </p>
+      <section className="relative w-full h-[180px] sm:h-[220px] md:h-[250px] bg-[#092b63] text-white overflow-hidden flex items-center justify-center">
+        <Image
+          src="/images/background image.jpg"
+          alt="Quality Banner Background"
+          fill
+          className="object-cover opacity-35"
+        />
+        <div className="absolute inset-0 bg-[#092b63]/80" />
+
+        <div className="container-custom relative z-20 text-center space-y-2">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold !text-white tracking-wider uppercase drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">
+            Quality & Compliance
+          </h1>
+          <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-white font-semibold uppercase tracking-wider">
+            <Link href="/" className="text-white hover:text-amber-400 transition-colors">
+              HOME
+            </Link>
+            <ChevronRight className="w-4 h-4 text-amber-400" />
+            <span className="text-amber-400 font-bold">QUALITY</span>
           </div>
         </div>
       </section>

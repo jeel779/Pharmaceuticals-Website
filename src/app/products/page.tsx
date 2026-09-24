@@ -39,17 +39,17 @@ export default function ProductsPage() {
   return (
     <div className="w-full">
       {/* Products Hero */}
-      <section className="relative w-full h-[220px] md:h-[280px] bg-[#092b63] text-white overflow-hidden flex items-center justify-center">
+      <section className="relative w-full h-[180px] sm:h-[220px] md:h-[250px] bg-[#092b63] text-white overflow-hidden flex items-center justify-center">
         <Image
-          src="/images/medicines.jpg"
+          src="/images/background image.jpg"
           alt="Products Banner Background"
           fill
-          className="object-cover opacity-30"
+          className="object-cover opacity-35"
         />
-        <div className="absolute inset-0 bg-[#092b63]/85" />
+        <div className="absolute inset-0 bg-[#092b63]/80" />
 
-        <div className="container-custom relative z-20 text-center space-y-3">
-          <h1 className="text-3xl md:text-5xl font-extrabold !text-white tracking-wider uppercase drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">
+        <div className="container-custom relative z-20 text-center space-y-2">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold !text-white tracking-wider uppercase drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">
             PRODUCTS
           </h1>
           <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-white font-semibold uppercase tracking-wider">

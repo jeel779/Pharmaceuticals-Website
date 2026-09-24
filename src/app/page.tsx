@@ -7,31 +7,36 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function HomePage() {
 
-  // Hero carousel image slider state
+  // Hero carousel image slider state with new folder images
   const sliderImages = [
     {
-      src: "/images/holding medicines.jpg",
+      src: "/images/home/holding-medicines.jpg",
       title: "Cost effectiveness Our mission to do available cost-effective products across the globe",
       subhead: "Your Health is our mission",
     },
     {
-      src: "/images/medicines.jpg",
+      src: "/images/home/stock-photo-pharmacy.jpg",
       title: "Quality Formulations & Global Export Reach",
       subhead: "Your Health is our mission",
     },
     {
-      src: "/images/lab testing.jpg",
+      src: "/images/home/laboratory.jpg",
       title: "Rigorous Quality Compliance & Regulatory Excellence",
       subhead: "Your Health is our mission",
     },
     {
-      src: "/images/nursetesting.jpg",
+      src: "/images/home/medications.jpg",
       title: "Comprehensive Healthcare Solutions Worldwide",
       subhead: "Your Health is our mission",
     },
     {
-      src: "/images/indiagate.jpg",
+      src: "/images/home/indiagate.jpg",
       title: "Premier Pharmaceutical Export Partner From India",
+      subhead: "Your Health is our mission",
+    },
+    {
+      src: "/images/home/stock-photo-top-view-angle-jar-pills-some-which-spilled-out-white.jpg",
+      title: "Trusted Healthcare Sourcing & Distribution",
       subhead: "Your Health is our mission",
     },
   ];
@@ -76,17 +81,17 @@ export default function HomePage() {
               className="object-cover object-center transform scale-100 transition-transform duration-[10000ms]"
             />
 
-            {/* Subtle Gradient Overlay for High Contrast Text Legibility */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent" />
+            {/* Dark Gradient Overlay to ensure bright white text pops out cleanly */}
+            <div className="absolute inset-0 bg-black/50" />
 
             {/* Slide Text Content */}
             <div className="absolute inset-0 flex items-center">
               <div className="container-custom">
                 <div className="max-w-2xl text-white space-y-4">
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] leading-tight">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold !text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.95)] leading-tight">
                     {slide.title}
                   </h1>
-                  <p className="text-sm sm:text-base md:text-xl text-amber-200 font-semibold tracking-wide drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+                  <p className="text-sm sm:text-base md:text-xl text-amber-300 font-semibold tracking-wide drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
                     {slide.subhead}
                   </p>
                   
