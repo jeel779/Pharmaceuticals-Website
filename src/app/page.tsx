@@ -82,11 +82,11 @@ export default function HomePage() {
             {/* Slide Text Content */}
             <div className="absolute inset-0 flex items-center">
               <div className="container-custom">
-                <div className="max-w-2xl text-white space-y-4 p-6 sm:p-8 rounded-2xl bg-slate-950/40 border border-white/10 backdrop-blur-[2px] shadow-2xl">
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#f59e0b] drop-shadow-lg leading-tight">
+                <div className="max-w-2xl text-white space-y-4">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] leading-tight">
                     {slide.title}
                   </h1>
-                  <p className="text-sm sm:text-base md:text-xl text-white font-semibold tracking-wide drop-shadow-md">
+                  <p className="text-sm sm:text-base md:text-xl text-amber-200 font-semibold tracking-wide drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
                     {slide.subhead}
                   </p>
                   

@@ -173,16 +173,7 @@ export const Header: React.FC = () => {
             })}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center gap-3">
-            <button
-              onClick={() => openEnquiryModal()}
-              className="px-4 py-2 rounded-xl bg-[#092b63] hover:bg-[#123f91] text-white text-xs font-bold uppercase tracking-wider shadow-sm transition-all flex items-center gap-1.5"
-            >
-              Contact Now
-              <Send className="w-3.5 h-3.5" />
-            </button>
-          </div>
+
 
           {/* Mobile Hamburger Button */}
           <button
@@ -221,17 +212,7 @@ export const Header: React.FC = () => {
                 </div>
               </div>
 
-              <div className="pt-6 border-t border-slate-100 space-y-3">
-                <button
-                  onClick={() => {
-                    setIsMobileMenuOpen(false);
-                    openEnquiryModal();
-                  }}
-                  className="w-full py-3 rounded-xl bg-[#092b63] text-white text-sm font-bold uppercase tracking-wider shadow-md flex items-center justify-center gap-2"
-                >
-                  Contact Now <Send className="w-4 h-4" />
-                </button>
-              </div>
+
             </div>
           </div>
         )}

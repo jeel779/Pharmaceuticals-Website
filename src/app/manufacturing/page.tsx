@@ -1,118 +1,115 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ShieldCheck, Award, CheckCircle2, Send, ArrowRight, Building2, FlaskConical } from "lucide-react";
-import { useEnquiry } from "@/components/EnquiryModal";
+import { ChevronRight } from "lucide-react";
+
+export const metadata = {
+  title: "Manufacturing | Priyan Pharmaceuticals",
+  description: "Priyan manufacturing mindset is quality first and quantity second. State of the art manufacturing facility equipped with high tech machinery for Tablets, Capsules, Injections, MDS, Syrups and Suspensions.",
+};
 
 export default function ManufacturingPage() {
-  const { openEnquiryModal } = useEnquiry();
+  const categories = [
+    {
+      title: "Tablets and Capsules",
+      image: "/images/Tablets&Capsules.jpg",
+      href: "/products/pharmaceuticals",
+    },
+    {
+      title: "Injections",
+      image: "/images/Injections1.jpg",
+      href: "/products/pharmaceuticals",
+    },
+    {
+      title: "MDS",
+      image: "/images/MDS1.jpg",
+      href: "/products/surgical-products",
+    },
+    {
+      title: "Syrup and Suspensions",
+      image: "/images/Syrup&Suspensions.jpg",
+      href: "/products/pharmaceuticals",
+    },
+  ];
 
   return (
     <div className="w-full bg-white text-slate-800">
       
-      {/* Header Banner */}
-      <section className="bg-[#092b63] text-white py-14 md:py-20 relative overflow-hidden">
-        <div className="container-custom relative z-10 text-center space-y-4 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-amber-300 text-xs font-semibold uppercase tracking-wider">
-            <Award className="w-4 h-4" /> Regulatory Compliant Partner Facilities
-          </div>
-          <h1 className="text-3xl md:text-5xl font-extrabold uppercase tracking-wide">
-            MANUFACTURING
+      {/* 1. HERO BREADCRUMB BANNER */}
+      <section className="relative w-full h-[220px] md:h-[280px] bg-[#092b63] text-white overflow-hidden flex items-center justify-center">
+        <Image
+          src="/images/medicines.jpg"
+          alt="Manufacturing Banner Background"
+          fill
+          className="object-cover opacity-25"
+        />
+        <div className="absolute inset-0 bg-[#092b63]/85" />
+
+        <div className="container-custom relative z-10 text-center space-y-3">
+          <h1 className="text-3xl md:text-5xl font-extrabold tracking-wide uppercase">
+            Manufacturing
           </h1>
-          <p className="text-sm md:text-base text-slate-200 leading-relaxed">
-            All the pharmaceutical products that we export are manufactured at our appropriate regulatory approved partner manufacturing sites with complete technical & analytical documentation.
-          </p>
-        </div>
-      </section>
-
-      {/* Main Content */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            <div className="lg:col-span-6 space-y-6">
-              <div className="space-y-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#d97706]">
-                  State-of-the-Art Partner Infrastructure
-                </span>
-                <h2 className="text-2xl md:text-3xl font-bold text-[#092b63]">
-                  WHO-GMP & Regulatory Approved Manufacturing Facilities
-                </h2>
-              </div>
-
-              <p className="text-sm md:text-base text-slate-600 leading-relaxed text-justify">
-                Priyan Pharmaceuticals collaborates with leading, audited manufacturing facilities in India equipped with modern automated production lines, climate-controlled environments, and advanced analytical testing laboratories.
-              </p>
-
-              <div className="space-y-4 pt-2">
-                {[
-                  {
-                    title: "Strict Regulatory Compliance",
-                    desc: "Facilities operate under WHO-GMP standards, state FDA registration (Drugs & Cosmetics), and MSME Udyam Aadhar certification.",
-                  },
-                  {
-                    title: "Advanced Dosage Form Capabilities",
-                    desc: "State-of-the-art production for Tablets, Hard Gelatin Capsules, Liquid & Dry Injections, Ointments, Syrups, Pellets, and APIs.",
-                  },
-                  {
-                    title: "Complete Dossier & Document Support",
-                    desc: "Provision of CTD/eCTD dossiers, Certificate of Analysis (COA), Method of Analysis (MOA), and real-time stability study reports.",
-                  },
-                ].map((item, idx) => (
-                  <div key={idx} className="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[#3fa56b] shrink-0 mt-0.5" />
-                    <div>
-                      <h3 className="text-sm font-bold text-[#092b63]">{item.title}</h3>
-                      <p className="text-xs text-slate-600 mt-1">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="pt-4 flex items-center gap-4">
-                <button
-                  onClick={() => openEnquiryModal()}
-                  className="px-6 py-3 rounded-xl bg-[#092b63] hover:bg-[#123f91] text-white font-bold text-xs uppercase tracking-wider shadow-md transition-all flex items-center gap-2"
-                >
-                  Contact Manufacturing Desk <Send className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-
-            <div className="lg:col-span-6">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-                <Image
-                  src="/images/quality_assurance_lab.jpg"
-                  alt="Pharmaceutical Manufacturing Facility Lab"
-                  width={600}
-                  height={450}
-                  className="w-full h-[400px] object-cover"
-                />
-              </div>
-            </div>
-
+          <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-slate-300 font-semibold uppercase tracking-wider">
+            <Link href="/" className="hover:text-amber-400 transition-colors">
+              Home
+            </Link>
+            <ChevronRight className="w-4 h-4 text-amber-500" />
+            <span className="text-amber-400">Manufacturing</span>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-12 bg-[#092b63] text-white text-center">
-        <div className="container-custom space-y-4">
-          <h2 className="text-xl md:text-2xl font-bold uppercase">
-            Need Contract Manufacturing or Bulk Export Inquiries?
-          </h2>
-          <p className="text-xs md:text-sm text-slate-200 max-w-xl mx-auto">
-            Contact Priyan Pharmaceuticals today to discuss your dosage requirements and dossier documentation needs.
+      {/* 2. INTRO SECTION */}
+      <section className="py-14 md:py-20 bg-white">
+        <div className="container-custom max-w-4xl mx-auto text-center space-y-5">
+          
+          <p className="text-base md:text-lg text-slate-600 font-medium leading-relaxed max-w-3xl mx-auto">
+            Priyan manufacturing mindset is quality first and quantity second. We work to the most complex of customer requirements.
           </p>
-          <div className="pt-2">
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs uppercase tracking-wider transition-all"
-            >
-              Get In Touch <ArrowRight className="w-4 h-4" />
-            </Link>
+
+          {/* Heartline image divider */}
+          <div className="flex justify-center py-1">
+            <Image
+              src="/images/section-img.png"
+              alt="Heart Line Divider"
+              width={80}
+              height={24}
+              className="h-5 w-auto object-contain"
+            />
+          </div>
+
+          <p className="text-sm md:text-base text-slate-600 leading-relaxed max-w-3xl mx-auto">
+            We have state of the art manufacturing facility equipped with high tech machinery and operated by qualified pharma technicians and professionals.
+          </p>
+
+        </div>
+      </section>
+
+      {/* 3. MANUFACTURING CATEGORY CARDS GRID */}
+      <section className="py-12 md:py-20 bg-slate-50 border-t border-slate-200">
+        <div className="container-custom max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {categories.map((cat, idx) => (
+              <Link
+                key={idx}
+                href={cat.href}
+                className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              >
+                <div className="relative h-48 w-full overflow-hidden bg-slate-100">
+                  <Image
+                    src={cat.image}
+                    alt={cat.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-5 text-center bg-white border-t border-slate-100">
+                  <h3 className="text-base font-bold text-[#092b63] group-hover:text-amber-600 transition-colors">
+                    {cat.title}
+                  </h3>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Phone, MapPin, HelpCircle } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata = {
@@ -8,25 +8,6 @@ export const metadata = {
 };
 
 export default function ContactPage() {
-  const faqs = [
-    {
-      q: "What product categories does Priyan Pharmaceuticals export?",
-      a: "We export pharmaceutical finished products (oral solids, injectables, liquids, ointments), nutraceuticals and food supplements, cosmetics and skincare, surgical products, APIs and excipients, pellets, and intermediates.",
-    },
-    {
-      q: "Do you provide regulatory CTD dossiers and Certificates of Analysis (COA)?",
-      a: "Yes, technical documentation including Certificates of Analysis (COA), finished product specifications, and CTD/eCTD dossier support can be provided according to target market requirements.",
-    },
-    {
-      q: "Where are the products manufactured?",
-      a: "Products are manufactured at appropriate regulatory-approved partner manufacturing facilities in India operating under strict quality management systems (WHO-GMP/ISO).",
-    },
-    {
-      q: "How do I request a quote or product specifications?",
-      a: "You can complete the contact form on this page or email our team directly at info@priyanpharmaceuticals.com with your product and volume requirements.",
-    },
-  ];
-
   return (
     <div className="w-full bg-white text-slate-800">
       {/* Contact Hero Banner */}
@@ -113,34 +94,6 @@ export default function ContactPage() {
               <ContactForm />
             </div>
 
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 bg-white border-t border-slate-200">
-        <div className="container-custom max-w-4xl space-y-8">
-          <div className="text-center space-y-2">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#092b63]">
-              FREQUENTLY ASKED QUESTIONS
-            </span>
-            <h2 className="text-2xl font-bold text-slate-900">
-              Frequently Asked Questions
-            </h2>
-          </div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, idx) => (
-              <div key={idx} className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
-                <h3 className="text-base font-bold text-[#092b63] flex items-center gap-2">
-                  <HelpCircle className="w-5 h-5 text-amber-500 shrink-0" />
-                  {faq.q}
-                </h3>
-                <p className="text-sm text-slate-600 leading-relaxed pl-7">
-                  {faq.a}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
