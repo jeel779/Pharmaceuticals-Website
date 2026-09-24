@@ -1,96 +1,164 @@
 import React from "react";
-import Metadata from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle2, ShieldCheck, Globe2, Award, Target, Eye, ArrowRight, Building2 } from "lucide-react";
-import { COMPANY_INFO } from "@/data/products";
+import { Check, ChevronRight } from "lucide-react";
 
 export const metadata = {
   title: "About Us | Priyan Pharmaceuticals",
-  description: "Learn about Priyan Pharmaceuticals, a professionally managed Indian pharmaceutical export organization dedicated to high quality finished formulations, nutraceuticals, cosmetics, APIs, and intermediates.",
+  description: "Learn about Priyan Pharmaceuticals, a professionally managed organization engaged in exporting pharmaceutical finished products, nutraceuticals, cosmetics, surgical products, APIs, and intermediates.",
 };
 
 export default function AboutPage() {
+  const whyUsList = [
+    { label: "Quality", text: "Wide range product portfolio with quality standard." },
+    { label: "Our People", text: "Experience staff with sound technical background." },
+    { label: "Price Policy", text: "Comparatively affordable and Competitive prices" },
+    { label: "Delivery", text: "Hassle free and timely" },
+    { label: "Network", text: "Broad Supply Network." },
+    { label: "Follow ups", text: "Continues follow up with customer to fulfil requirement as per commitment." },
+  ];
+
   return (
-    <div className="w-full">
-      {/* Hero Banner */}
-      <section className="bg-gradient-to-r from-[#092b63] to-[#123f91] text-white py-16 md:py-20">
-        <div className="container-custom">
-          <div className="max-w-3xl space-y-4">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#3fa56b]">
-              CORPORATE OVERVIEW
-            </span>
-            <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
-              About Priyan Pharmaceuticals
-            </h1>
-            <p className="text-base md:text-lg text-slate-200 leading-relaxed">
-              A professionally managed pharmaceutical export organization committed to delivering high-quality healthcare products to global markets.
-            </p>
+    <div className="w-full bg-white text-slate-800">
+      
+      {/* 1. HERO BREADCRUMB BANNER */}
+      <section className="relative w-full h-[220px] md:h-[280px] bg-[#092b63] text-white overflow-hidden flex items-center justify-center">
+        {/* Background Image with Dark Blue Tint */}
+        <Image
+          src="/images/medicines.jpg"
+          alt="About Us Banner Background"
+          fill
+          className="object-cover opacity-25"
+        />
+        <div className="absolute inset-0 bg-[#092b63]/85" />
+
+        <div className="container-custom relative z-10 text-center space-y-3">
+          <h1 className="text-3xl md:text-5xl font-extrabold tracking-wide uppercase">
+            About Us
+          </h1>
+          <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-slate-300 font-semibold uppercase tracking-wider">
+            <Link href="/" className="hover:text-amber-400 transition-colors">
+              Home
+            </Link>
+            <ChevronRight className="w-4 h-4 text-amber-500" />
+            <span className="text-amber-400">About Us</span>
           </div>
         </div>
       </section>
 
-      {/* Main Introduction */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      {/* 2. WELCOME TO PRIYAN PHARMACEUTICALS SECTION */}
+      <section className="py-14 md:py-20 bg-white">
+        <div className="container-custom max-w-4xl mx-auto text-center space-y-6">
+          
+          <div className="space-y-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#092b63] tracking-wide uppercase">
+              WELCOME TO PRIYAN PHARMACEUTICALS
+            </h2>
             
-            <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-bold uppercase tracking-widest text-[#123f91]">
-                OUR HERITAGE & VISION
-              </span>
-              <h2 className="text-slate-900 font-bold">
-                A Trusted Partner in Pharmaceutical Exports
-              </h2>
-              <p className="text-sm md:text-base text-[#667085] leading-relaxed">
-                Priyan Pharmaceuticals is engaged in the export of pharmaceutical finished products, nutraceuticals, food supplements, cosmetics, surgical products, APIs, excipients, pellets, and intermediates.
-              </p>
-              <p className="text-sm md:text-base text-[#667085] leading-relaxed">
-                Our core philosophy centers on providing quality-assured healthcare products that support better health outcomes worldwide. We operate as a central export hub connecting verified, regulatory-compliant Indian manufacturing partners with international healthcare distributors, hospital networks, and pharmaceutical importers.
-              </p>
-              <p className="text-sm md:text-base text-[#667085] leading-relaxed">
-                We place heavy emphasis on strict regulatory documentation, quality management, transparent communication, and cost-effective sourcing strategies.
-              </p>
+            {/* Heartline image divider */}
+            <div className="flex justify-center py-1">
+              <Image
+                src="/images/section-img.png"
+                alt="Heart Line Divider"
+                width={80}
+                height={24}
+                className="h-5 w-auto object-contain"
+              />
             </div>
 
-            <div className="lg:col-span-6">
-              <div className="image-wrapper rounded-3xl overflow-hidden border-4 border-slate-100 shadow-xl">
+            <p className="text-xs sm:text-sm font-semibold text-slate-500 tracking-wider uppercase">
+              Your Health is our mission
+            </p>
+          </div>
+
+          <div className="text-left space-y-5 text-sm sm:text-base text-slate-600 leading-relaxed text-justify pt-4">
+            <p>
+              Priyan Pharmaceuticals is a professionally managed and dynamic organization, engaged in the pharmaceutical business involving to export pharmaceutical finished products, nutraceutical/food supplements, cosmetics, surgical products and also raw material – API, Excipients, pellets, and intermediates etc. With a desire of providing opportunities for a better life, we work very hard to bring supreme quality products to our customers with regulatory compliance and cost effective.
+            </p>
+            <p>
+              We have instilled a level of trust and confidence amongst our clients by supplying the best quality products to its esteemed patrons. Our products will be available in the various parts of the different country and we are committed to further increasing global access for cost effective healthcare. We venture to make products available to everyone and everywhere.
+            </p>
+            <p>
+              Priyan Pharmaceuticals is registered with Gujarat State FDA (Food and Drug Administration) under Drugs and Cosmetics and register with Udyam Aadhar (MSME). It also follows all international regulatory standard while providing service to globally presented client. We believe in sustainable growth & innovative solution.
+            </p>
+            <p>
+              All the pharmaceutical products that we export are manufactured at our appropriate regulatory approved partner manufacturing sites We are committed to offer you wide variety of quality products from various manufacturers of repute in India, along with all technical documents required by customer as per demand.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 3. WHY US? SECTION */}
+      <section className="py-14 md:py-20 bg-slate-50 border-t border-b border-slate-200">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            {/* Left Image: why chose us.webp */}
+            <div className="lg:col-span-6 flex justify-center">
+              <div className="relative w-full max-w-lg rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-white p-2">
                 <Image
-                  src="/images/about_pharma_facility.jpg"
-                  alt="Priyan Pharmaceuticals Partner Manufacturing Site"
+                  src="/images/why chose us.webp"
+                  alt="Why Choose Priyan Pharmaceuticals"
                   width={600}
-                  height={450}
-                  className="w-full h-[380px] md:h-[440px] object-cover"
+                  height={400}
+                  className="w-full h-auto object-contain rounded-xl"
                 />
               </div>
             </div>
 
+            {/* Right Checklist Details */}
+            <div className="lg:col-span-6 space-y-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#092b63] uppercase tracking-wider">
+                WHY US?
+              </h2>
+
+              <ul className="space-y-4">
+                {whyUsList.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-slate-200 text-[#092b63] flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+                      <Check className="w-4 h-4 stroke-[3]" />
+                    </div>
+                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                      <strong className="text-[#092b63] font-bold">{item.label}:</strong> {item.text}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* Mission and Vision Grid */}
-      <section className="py-16 bg-[#f8fafc] border-t border-b border-slate-200/60">
-        <div className="container-custom">
+      {/* 4. OUR VISION & OUR MISSION SECTION */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container-custom max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <div className="p-8 rounded-3xl bg-white border border-slate-200/80 shadow-sm space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#123f91] flex items-center justify-center">
-                <Target className="w-6 h-6" />
+            {/* Our Vision Card */}
+            <div className="p-8 rounded-2xl bg-white border border-slate-200/80 shadow-lg hover:shadow-xl transition-shadow space-y-4">
+              <div className="w-12 h-12 rounded-full bg-[#092b63] text-white flex items-center justify-center font-bold shadow">
+                <Check className="w-6 h-6 stroke-[3]" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900">Our Mission</h3>
-              <p className="text-sm text-[#667085] leading-relaxed">
-                To serve as a dependable global pharmaceutical export hub by making high-quality, regulatory-compliant, and cost-effective healthcare formulations accessible across international markets.
+              <h3 className="text-xl font-bold text-[#092b63]">
+                Our Vision
+              </h3>
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                To enter the advanced markets of the world with a sustained presence over the long term.
               </p>
             </div>
 
-            <div className="p-8 rounded-3xl bg-white border border-slate-200/80 shadow-sm space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-[#3fa56b] flex items-center justify-center">
-                <Eye className="w-6 h-6" />
+            {/* Our Mission Card */}
+            <div className="p-8 rounded-2xl bg-white border border-slate-200/80 shadow-lg hover:shadow-xl transition-shadow space-y-4">
+              <div className="w-12 h-12 rounded-full bg-[#092b63] text-white flex items-center justify-center font-bold shadow">
+                <Check className="w-6 h-6 stroke-[3]" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900">Our Vision</h3>
-              <p className="text-sm text-[#667085] leading-relaxed">
-                To build long-lasting international healthcare partnerships based on quality sourcing, regulatory transparency, technical documentation support, and operational excellence.
+              <h3 className="text-xl font-bold text-[#092b63]">
+                Our Mission
+              </h3>
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                To consistently delivering high quality, safe and effective pharmaceutical products and services that meet customer expectations across the globe
               </p>
             </div>
 
@@ -98,63 +166,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Manufacturing Partner Approach */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container-custom max-w-4xl space-y-8">
-          <div className="text-center space-y-3">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#123f91]">
-              QUALITY ECOSYSTEM
-            </span>
-            <h2 className="text-slate-900 font-bold">
-              Our Manufacturing Partner Approach
-            </h2>
-            <p className="text-sm md:text-base text-[#667085]">
-              Exported products are manufactured at appropriate regulatory-approved partner manufacturing sites operating under stringent quality control procedures.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center space-y-3">
-              <div className="w-10 h-10 rounded-full bg-blue-100 text-[#123f91] flex items-center justify-center mx-auto">
-                <ShieldCheck className="w-5 h-5" />
-              </div>
-              <h4 className="font-bold text-slate-900">Regulatory Approval</h4>
-              <p className="text-xs text-[#667085] leading-relaxed">
-                Working strictly with manufacturing sites holding applicable WHO-GMP and ISO accreditations.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center space-y-3">
-              <div className="w-10 h-10 rounded-full bg-emerald-100 text-[#3fa56b] flex items-center justify-center mx-auto">
-                <Award className="w-5 h-5" />
-              </div>
-              <h4 className="font-bold text-slate-900">Analytical Testing</h4>
-              <p className="text-xs text-[#667085] leading-relaxed">
-                Every product batch undergoes complete analytical testing matching pharmacopoeial monographs.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center space-y-3">
-              <div className="w-10 h-10 rounded-full bg-indigo-100 text-[#123f91] flex items-center justify-center mx-auto">
-                <Globe2 className="w-5 h-5" />
-              </div>
-              <h4 className="font-bold text-slate-900">Export Coordination</h4>
-              <p className="text-xs text-[#667085] leading-relaxed">
-                Providing comprehensive dossiers, Certificate of Analysis (COA), and custom market packaging.
-              </p>
-            </div>
-          </div>
-
-          <div className="pt-6 text-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#123f91] hover:bg-[#092b63] text-white font-semibold text-sm shadow transition-all"
-            >
-              Contact Our Corporate Desk <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

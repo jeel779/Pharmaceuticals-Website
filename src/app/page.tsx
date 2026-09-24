@@ -3,11 +3,9 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, Send, ArrowRight } from "lucide-react";
-import { useEnquiry } from "@/components/EnquiryModal";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function HomePage() {
-  const { openEnquiryModal } = useEnquiry();
 
   // Hero carousel image slider state
   const sliderImages = [
@@ -59,7 +57,7 @@ export default function HomePage() {
     <div className="w-full bg-white text-slate-800">
       
       {/* 1. HERO IMAGE TRANSFORM SLIDER */}
-      <section className="relative w-full h-[380px] sm:h-[450px] md:h-[550px] bg-slate-900 overflow-hidden">
+      <section className="relative w-full h-[380px] sm:h-[480px] md:h-[580px] bg-slate-900 overflow-hidden">
         
         {/* Carousel Slides */}
         {sliderImages.map((slide, index) => (
@@ -69,24 +67,26 @@ export default function HomePage() {
               index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
             }`}
           >
+            {/* Clear Image Display */}
             <Image
               src={slide.src}
               alt={slide.title}
               fill
               priority={index === 0}
-              className="object-cover object-center transform scale-105 transition-transform duration-[10000ms]"
+              className="object-cover object-center transform scale-100 transition-transform duration-[10000ms]"
             />
-            {/* Dark Overlay for Text Contrast */}
-            <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]" />
+
+            {/* Subtle Gradient Overlay for High Contrast Text Legibility */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent" />
 
             {/* Slide Text Content */}
             <div className="absolute inset-0 flex items-center">
               <div className="container-custom">
-                <div className="max-w-2xl text-white space-y-4">
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#d97706] drop-shadow-md leading-tight">
+                <div className="max-w-2xl text-white space-y-4 p-6 sm:p-8 rounded-2xl bg-slate-950/40 border border-white/10 backdrop-blur-[2px] shadow-2xl">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#f59e0b] drop-shadow-lg leading-tight">
                     {slide.title}
                   </h1>
-                  <p className="text-sm sm:text-base md:text-lg text-amber-200 font-medium tracking-wide">
+                  <p className="text-sm sm:text-base md:text-xl text-white font-semibold tracking-wide drop-shadow-md">
                     {slide.subhead}
                   </p>
                   
@@ -94,13 +94,13 @@ export default function HomePage() {
                   <div className="pt-2 flex flex-wrap items-center gap-4">
                     <Link
                       href="/contact"
-                      className="px-6 py-2.5 sm:px-7 sm:py-3 rounded-lg bg-[#092b63] hover:bg-[#123f91] text-white font-bold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-lg"
+                      className="px-6 py-2.5 sm:px-7 sm:py-3 rounded-lg bg-[#092b63] hover:bg-[#123f91] text-white font-bold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-xl border border-blue-400/30"
                     >
                       Contact Now
                     </Link>
                     <Link
                       href="/about"
-                      className="px-6 py-2.5 sm:px-7 sm:py-3 rounded-lg bg-[#d97706] hover:bg-amber-600 text-white font-bold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-lg"
+                      className="px-6 py-2.5 sm:px-7 sm:py-3 rounded-lg bg-[#d97706] hover:bg-amber-600 text-white font-bold text-xs sm:text-sm tracking-wider uppercase transition-all shadow-xl"
                     >
                       About Us
                     </Link>
@@ -114,7 +114,7 @@ export default function HomePage() {
         {/* Carousel Navigation Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-[#092b63]/80 hover:bg-[#092b63] text-white flex items-center justify-center transition-all shadow-lg border border-white/20"
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-[#092b63] hover:bg-[#123f91] text-white flex items-center justify-center transition-all shadow-2xl border border-white/20"
           aria-label="Previous Slide"
         >
           <ChevronLeft className="w-6 h-6" />
@@ -122,7 +122,7 @@ export default function HomePage() {
 
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-[#092b63]/80 hover:bg-[#092b63] text-white flex items-center justify-center transition-all shadow-lg border border-white/20"
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-[#092b63] hover:bg-[#123f91] text-white flex items-center justify-center transition-all shadow-2xl border border-white/20"
           aria-label="Next Slide"
         >
           <ChevronRight className="w-6 h-6" />
@@ -135,7 +135,7 @@ export default function HomePage() {
               key={idx}
               onClick={() => setCurrentSlide(idx)}
               className={`h-2.5 rounded-full transition-all ${
-                idx === currentSlide ? "w-8 bg-[#d97706]" : "w-2.5 bg-white/60 hover:bg-white"
+                idx === currentSlide ? "w-8 bg-[#d97706]" : "w-2.5 bg-white/70 hover:bg-white"
               }`}
               aria-label={`Go to slide ${idx + 1}`}
             />
@@ -145,18 +145,25 @@ export default function HomePage() {
 
       {/* 2. WELCOME TO PRIYAN PHARMACEUTICALS SECTION */}
       <section className="py-16 md:py-24 bg-white">
-        <div className="container-custom max-w-4xl mx-auto text-center space-y-8">
+        <div className="container-custom max-w-4xl mx-auto text-center space-y-6">
           
-          {/* Section Header */}
-          <div className="space-y-3">
+          {/* Section Header with section-img.png heartline divider */}
+          <div className="space-y-2">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#092b63] tracking-wide uppercase">
               WELCOME TO PRIYAN PHARMACEUTICALS
             </h2>
-            <div className="flex items-center justify-center gap-2 text-sky-500">
-              <span className="w-8 h-0.5 bg-sky-500" />
-              <span className="text-xs font-mono">--\--</span>
-              <span className="w-8 h-0.5 bg-sky-500" />
+            
+            {/* Heartline section image divider */}
+            <div className="flex justify-center py-1">
+              <Image
+                src="/images/section-img.png"
+                alt="Heart Line Divider"
+                width={80}
+                height={24}
+                className="h-5 w-auto object-contain"
+              />
             </div>
+
             <p className="text-xs sm:text-sm font-semibold text-slate-500 tracking-wider uppercase">
               Your Health is our mission
             </p>
@@ -211,60 +218,6 @@ export default function HomePage() {
             />
           </div>
 
-        </div>
-      </section>
-
-      {/* 4. QUICK PRODUCT CATEGORIES PORTFOLIO */}
-      <section className="py-12 md:py-16 bg-white border-t border-slate-100">
-        <div className="container-custom">
-          <div className="flex flex-col md:flex-row items-center justify-between mb-8 gap-4">
-            <div>
-              <h2 className="text-2xl font-extrabold text-[#092b63] uppercase tracking-wider">
-                Product Categories
-              </h2>
-              <p className="text-xs font-semibold text-slate-500 uppercase mt-1">
-                Wide spectrum of pharmaceutical & healthcare formulations
-              </p>
-            </div>
-            <Link
-              href="/products"
-              className="px-5 py-2.5 rounded-lg bg-[#092b63] text-white text-xs font-bold uppercase tracking-wider hover:bg-[#123f91] transition-all flex items-center gap-2"
-            >
-              View All Products <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { title: "Pharmaceutical Finished Products", slug: "pharmaceuticals", img: "/images/cat_finished_pharma.jpg" },
-              { title: "Nutraceuticals and Food Supplements", slug: "nutraceuticals", img: "/images/cat_nutraceuticals.jpg" },
-              { title: "Cosmetics and Personal Care", slug: "cosmetics", img: "/images/cat_cosmetics.jpg" },
-              { title: "Surgical Products", slug: "surgical-products", img: "/images/cat_surgicals.jpg" },
-              { title: "APIs and Excipients", slug: "apis-excipients", img: "/images/cat_apis.jpg" },
-              { title: "Pellets and Intermediates", slug: "pellets-intermediates", img: "/images/cat_pellets.jpg" },
-            ].map((cat, idx) => (
-              <Link
-                key={idx}
-                href={`/products/${cat.slug}`}
-                className="group relative rounded-xl overflow-hidden shadow-sm border border-slate-200 bg-white hover:shadow-md transition-all"
-              >
-                <div className="relative h-44 w-full overflow-hidden">
-                  <Image
-                    src={cat.img}
-                    alt={cat.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#092b63]/90 via-[#092b63]/40 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-base font-bold text-white group-hover:text-amber-300 transition-colors">
-                      {cat.title}
-                    </h3>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
         </div>
       </section>
 

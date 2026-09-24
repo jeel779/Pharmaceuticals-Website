@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { 
   ChevronDown, 
@@ -70,7 +71,7 @@ export const Header: React.FC = () => {
 
   return (
     <div className="w-full">
-      {/* Top Contact Bar as in screenshot */}
+      {/* Top Contact Bar */}
       <div className="bg-slate-50 border-b border-slate-200 text-[#d97706] py-1.5 text-xs font-semibold">
         <div className="container-custom flex items-center justify-end gap-6">
           <div className="flex items-center gap-1.5 hover:text-[#b45309] transition-colors">
@@ -90,25 +91,16 @@ export const Header: React.FC = () => {
       }`}>
         <div className="container-custom flex items-center justify-between">
           
-          {/* Company Logo */}
+          {/* Company Logo Image */}
           <Link href="/" className="flex items-center gap-3 group" onClick={() => setIsMobileMenuOpen(false)}>
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#123f91] to-[#3fa56b] p-0.5 shadow-sm group-hover:shadow transition-shadow">
-              <div className="w-full h-full bg-white rounded-[10px] flex items-center justify-center">
-                <svg className="w-6 h-6 text-[#123f91]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M12 2v20M2 12h20" strokeLinecap="round" opacity="0.2" />
-                  <path d="M12 4a8 8 0 0 1 8 8c0 4.418-3.582 8-8 8s-8-3.582-8-8a8 8 0 0 1 8-8z" stroke="#123f91" />
-                  <path d="M12 7v10M7 12h10" stroke="#3fa56b" strokeLinecap="round" />
-                </svg>
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-lg md:text-xl tracking-tight text-[#092b63] leading-none">
-                PRIYAN
-              </span>
-              <span className="text-[10px] md:text-[11px] font-semibold tracking-widest text-[#3fa56b] uppercase">
-                PHARMACEUTICALS
-              </span>
-            </div>
+            <Image
+              src="/images/logo.png"
+              alt="Priyan Pharmaceuticals Logo"
+              width={220}
+              height={55}
+              className="h-10 md:h-12 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
