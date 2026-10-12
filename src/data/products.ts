@@ -16,11 +16,11 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
   {
     id: "finished-pharma",
     slug: "pharmaceuticals",
-    title: "Pharmaceutical Finished Products",
+    title: "Pharmaceuticals Products",
     subtitle: "Quality-assured finished formulations for global healthcare markets",
     description: "Quality-assured finished pharmaceutical formulations for different therapeutic categories and global markets.",
-    fullDescription: "Priyan Pharmaceuticals supplies finished pharmaceutical formulations (tablets, capsules, injections, oral liquids, ointments, dry powder inhalers) sourced from regulatory-approved partner manufacturing facilities. We ensure every batch conforms to international pharmacopoeial standards (USP/BP/EP) and customer-specific market requirements.",
-    image: "/images/cat_finished_pharma.jpg",
+    fullDescription: "Kanish Pharmaceuticals Pvt. Ltd. supplies finished pharmaceutical formulations (tablets, capsules, injections, oral liquids, ointments, dry powder inhalers) sourced from regulatory-approved partner manufacturing facilities. We ensure every batch conforms to international pharmacopoeial standards (USP/BP/EP) and customer-specific market requirements.",
+    image: "/products/medicine-pills.jpg",
     iconName: "Pill",
     productTypes: [
       "Oral Solid Dosage (Tablets & Hard Gelatin Capsules)",
@@ -47,11 +47,11 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
   {
     id: "nutraceuticals",
     slug: "nutraceuticals",
-    title: "Nutraceuticals and Food Supplements",
+    title: "Nutraceuticals products",
     subtitle: "Nutrition-focused formulations to support wellness and daily health",
     description: "Nutrition-focused products designed to support wellness and daily health requirements.",
     fullDescription: "Our nutraceutical product portfolio encompasses vitamins, minerals, herbal extracts, protein supplements, and dietary formulations designed to support holistic health. We collaborate with quality-oriented manufacturing partners to deliver safe, compliant, and cost-effective health supplements for international distributors.",
-    image: "/images/cat_nutraceuticals.jpg",
+    image: "/products/nutracutical-products.jpg",
     iconName: "Apple",
     productTypes: [
       "Multivitamin & Mineral Softgel Capsules",
@@ -73,6 +73,68 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
       "Heavy Metal & Microbiological Testing Reports",
       "Free Sale Certificate (FSC) Assistance",
       "Custom Export Packaging & Private Labeling Support"
+    ]
+  },
+  {
+    id: "mds",
+    slug: "mds",
+    title: "MDS products",
+    subtitle: "Metered Dose Spray & specialized sterile formulations",
+    description: "Sterile metered dose sprays, inhalers, and targeted aerosol formulations conforming to international regulatory standards.",
+    fullDescription: "Kanish Pharmaceuticals Pvt. Ltd. supplies advanced Metered Dose Spray (MDS) formulations, inhalers, and specialized sterile aerosols. Sourced from certified state-of-the-art partner facilities, our MDS range provides uniform droplet dispersion, precise dosage delivery, and optimal bioavailability for respiratory, nasal, and topical therapeutic applications.",
+    image: "/products/stock-photo-pharmacy.jpg",
+    iconName: "FlaskConical",
+    productTypes: [
+      "Metered Dose Nasal Sprays (Aqueous & Suspension)",
+      "Pressurized Metered Dose Inhalers (pMDI)",
+      "Sterile Topical Sprays & Aerosols",
+      "Oral Mucosal & Throat Sprays",
+      "Unit-Dose & Multi-Dose Inhalation Solutions"
+    ],
+    therapeuticCategories: [
+      "Respiratory & Anti-Asthmatic Formulations",
+      "Allergic Rhinitis & Decongestant Care",
+      "Pain Relief & Topical Anesthetic Sprays",
+      "Antiseptic & Wound Cleansing Aerosols",
+      "Pediatric & Adult Dosage Delivery Systems"
+    ],
+    technicalSupport: [
+      "Spray Pattern & Plume Geometry Analysis Data",
+      "Delivered Dose Uniformity (DDU) per Actuation",
+      "Aerodynamic Particle Size Distribution (APSD)",
+      "Certificate of Analysis (COA) per Batch",
+      "CTD / eCTD Registration Technical Dossier Support"
+    ]
+  },
+  {
+    id: "surgicals",
+    slug: "surgical-products",
+    title: "Surgical products",
+    subtitle: "Healthcare and surgical items for hospitals, distributors, and institutional buyers",
+    description: "Healthcare and surgical products intended for hospitals, clinics, distributors, and institutional buyers.",
+    fullDescription: "Kanish Pharmaceuticals Pvt. Ltd. supplies a wide spectrum of sterile surgical disposables, wound care items, diagnostic consumables, and hospital equipment. Sourced from certified medical device manufacturers, our surgical portfolio supports hospital networks and international healthcare procurement agencies.",
+    image: "/products/surgical-product.jpg",
+    iconName: "Activity",
+    productTypes: [
+      "Disposable Surgical Drapes, Gowns & Caps",
+      "Sterile Surgical Gloves (Latex & Nitrile)",
+      "IV Cannulas, Catheters & Infusion Sets",
+      "Wound Care Dressing & Surgical Sutures",
+      "Sterile Syringes, Needles & Blood Tubes"
+    ],
+    therapeuticCategories: [
+      "Operating Theater Consumables",
+      "Infection Control & Barrier Protection",
+      "Intravenous & Fluid Management",
+      "Trauma Care & Wound Management",
+      "Hospital Ward & Diagnostic Supplies"
+    ],
+    technicalSupport: [
+      "Sterilization Certificates (EO / Gamma Irradiation)",
+      "Quality Standard Compliance Declarations",
+      "Detailed Product Specifications & Dimensional Charts",
+      "Batch Traceability & Lot Documentation",
+      "International Shipping Documentation"
     ]
   },
   {
@@ -104,37 +166,6 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
       "Stability & Preservative Challenge Data",
       "Material Safety Data Sheets (MSDS)",
       "Regulatory Label Compliance Check"
-    ]
-  },
-  {
-    id: "surgicals",
-    slug: "surgical-products",
-    title: "Surgical Products",
-    subtitle: "Healthcare and surgical items for hospitals, distributors, and institutional buyers",
-    description: "Healthcare and surgical products intended for hospitals, clinics, distributors, and institutional buyers.",
-    fullDescription: "Priyan Pharmaceuticals supplies a wide spectrum of sterile surgical disposables, wound care items, diagnostic consumables, and hospital equipment. Sourced from certified medical device manufacturers, our surgical portfolio supports hospital networks and international healthcare procurement agencies.",
-    image: "/images/cat_surgicals.jpg",
-    iconName: "Activity",
-    productTypes: [
-      "Disposable Surgical Drapes, Gowns & Caps",
-      "Sterile Surgical Gloves (Latex & Nitrile)",
-      "IV Cannulas, Catheters & Infusion Sets",
-      "Wound Care Dressing & Surgical Sutures",
-      "Sterile Syringes, Needles & Blood Tubes"
-    ],
-    therapeuticCategories: [
-      "Operating Theater Consumables",
-      "Infection Control & Barrier Protection",
-      "Intravenous & Fluid Management",
-      "Trauma Care & Wound Management",
-      "Hospital Ward & Diagnostic Supplies"
-    ],
-    technicalSupport: [
-      "Sterilization Certificates (EO / Gamma Irradiation)",
-      "Quality Standard Compliance Declarations",
-      "Detailed Product Specifications & Dimensional Charts",
-      "Batch Traceability & Lot Documentation",
-      "International Shipping Documentation"
     ]
   },
   {
@@ -174,7 +205,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     title: "Pellets and Intermediates",
     subtitle: "Specialized pharmaceutical materials for manufacturing and formulation applications",
     description: "Specialized pharmaceutical materials for manufacturing and formulation applications.",
-    fullDescription: "Priyan Pharmaceuticals offers sustained-release, enteric-coated, and modified-release pharmaceutical pellets alongside key chemical intermediates. These specialized materials empower drug manufacturers to create advanced solid dosage formulations with optimized bio-availability and targeted release profiles.",
+    fullDescription: "KANISH PHARMACEUTICALS PVT LTD. offers sustained-release, enteric-coated, and modified-release pharmaceutical pellets alongside key chemical intermediates. These specialized materials empower drug manufacturers to create advanced solid dosage formulations with optimized bio-availability and targeted release profiles.",
     image: "/images/cat_pellets.jpg",
     iconName: "Layers",
     productTypes: [
@@ -202,12 +233,13 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
 ];
 
 export const COMPANY_INFO = {
-  name: "Priyan Pharmaceuticals",
-  tagline: "Your Health Is Our Mission",
+  name: "KANISH PHARMACEUTICALS PVT LTD.",
+  tagline: "Healthy horizons for all",
   heroHeadline: "India Hub of Pharmaceutical Manufacturing",
   heroSubhead: "Delivering quality pharmaceutical, nutraceutical, cosmetic, surgical, and healthcare products to customers across the globe.",
-  email: "info@priyanpharmaceuticals.com",
-  phone: "+91 98765 43210",
-  address: "Gujarat / Maharashtra Industrial Belt, India",
+  email: "info@kanishpharmaceuticals.com",
+  secondaryEmail: "dharmpatel2111@yahoo.com",
+  phone: "+91 9727250640 / +91 9016808536",
+  address: "13 FF, Komal park Co-operative Society, B/S Gyangita primary school, Nr. Chappaya Appartment, Parshwanath Township, Nava Naroda, Ahmedabad-382346, Gujarat, India.",
   copyrightYear: 2026,
 };

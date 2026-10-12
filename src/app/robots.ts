@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://priyanpharmaceuticals.com/sitemap.xml',
+    sitemap: 'https://kanishpharmaceuticals.com/sitemap.xml',
   };
 }

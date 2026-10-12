@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
               Who Are We?
             </h3>
             <p className="text-sm text-slate-200 leading-relaxed text-justify">
-              Priyan Pharmaceuticals is a professionally managed and dynamic organization with decades of experience in the pharmaceutical field. With a desire of providing opportunities for a better life, we work very hard to bring quality drugs to our customers with regulatory compliance and cost effective. We have instilled a level of trust and confidence amongst our clients by supplying the best quality products.
+              KANISH PHARMACEUTICALS PVT LTD. is a professionally managed and dynamic organization with decades of experience in the pharmaceutical field. With a desire of providing opportunities for a better life, we work very hard to bring quality drugs to our customers with regulatory compliance and cost effective. We have instilled a level of trust and confidence amongst our clients by supplying the best quality products.
             </p>
             
             {/* Social Icons */}
@@ -107,11 +107,11 @@ export const Footer: React.FC = () => {
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
                 <div className="flex flex-col">
-                  <a href="mailto:info@priyanpharmaceuticals.com" className="hover:text-amber-300 transition-colors">
-                    info@priyanpharmaceuticals.com
+                  <a href="mailto:info@kanishpharmaceuticals.com" className="hover:text-amber-300 transition-colors">
+                    info@kanishpharmaceuticals.com
                   </a>
-                  <a href="mailto:priyanpharmaceuticals@gmail.com" className="hover:text-amber-300 transition-colors">
-                    priyanpharmaceuticals@gmail.com
+                  <a href="mailto:dharmpatel2111@yahoo.com" className="hover:text-amber-300 transition-colors">
+                    dharmpatel2111@yahoo.com
                   </a>
                 </div>
               </li>
@@ -122,7 +122,7 @@ export const Footer: React.FC = () => {
 
         {/* Footer Bottom Bar */}
         <div className="pt-6 flex items-center justify-between text-xs text-slate-300">
-          <p>© Copyright 2026 | All Rights Reserved by priyanpharmaceuticals.com</p>
+          <p>© Copyright 2026 | All Rights Reserved by Kanish Pharmaceuticals Pvt. Ltd.</p>
           <button
             onClick={scrollToTop}
             aria-label="Scroll to top"

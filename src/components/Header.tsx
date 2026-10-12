@@ -5,27 +5,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { 
-  ChevronDown, 
   Menu, 
   X, 
   Phone, 
   Mail, 
-  Send,
-  Pill,
-  Apple,
-  Sparkles,
-  Activity,
-  FlaskConical,
-  Layers
 } from "lucide-react";
-import { PRODUCT_CATEGORIES } from "@/data/products";
 import { useEnquiry } from "@/components/EnquiryModal";
 
 export const Header: React.FC = () => {
   const pathname = usePathname();
   const { openEnquiryModal } = useEnquiry();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isProductsDropdownOpen, setIsProductsDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -53,21 +43,9 @@ export const Header: React.FC = () => {
     { name: "ABOUT US", href: "/about" },
     { name: "MANUFACTURING", href: "/manufacturing" },
     { name: "GLOBAL PRESENCE", href: "/global-presence" },
-    { name: "PRODUCTS", href: "/products", hasDropdown: true },
+    { name: "PRODUCTS", href: "/products" },
     { name: "CONTACT US", href: "/contact" },
   ];
-
-  const getCategoryIcon = (iconName: string) => {
-    switch (iconName) {
-      case "Pill": return <Pill className="w-4 h-4 text-blue-600" />;
-      case "Apple": return <Apple className="w-4 h-4 text-emerald-600" />;
-      case "Sparkles": return <Sparkles className="w-4 h-4 text-amber-600" />;
-      case "Activity": return <Activity className="w-4 h-4 text-teal-600" />;
-      case "FlaskConical": return <FlaskConical className="w-4 h-4 text-indigo-600" />;
-      case "Layers": return <Layers className="w-4 h-4 text-sky-600" />;
-      default: return <Pill className="w-4 h-4 text-blue-600" />;
-    }
-  };
 
   return (
     <div className="w-full">
@@ -80,7 +58,7 @@ export const Header: React.FC = () => {
           </div>
           <div className="flex items-center gap-1.5 hover:text-[#b45309] transition-colors">
             <Mail className="w-3.5 h-3.5 text-[#092b63]" />
-            <a href="mailto:info@priyanpharmaceuticals.com">info@priyanpharmaceuticals.com</a>
+            <a href="mailto:info@kanishpharmaceuticals.com">info@kanishpharmaceuticals.com</a>
           </div>
         </div>
       </div>
@@ -95,7 +73,7 @@ export const Header: React.FC = () => {
           <Link href="/" className="flex items-center gap-3 group" onClick={() => setIsMobileMenuOpen(false)}>
             <Image
               src="/images/logo.png"
-              alt="Priyan Pharmaceuticals Logo"
+              alt="KANISH PHARMACEUTICALS PVT LTD. Logo"
               width={220}
               height={55}
               className="h-10 md:h-12 w-auto object-contain"
@@ -107,57 +85,6 @@ export const Header: React.FC = () => {
           <nav className="hidden lg:flex items-center gap-1 xl:gap-3">
             {navLinks.map((link) => {
               const isActive = pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href));
-
-              if (link.hasDropdown) {
-                return (
-                  <div 
-                    key={link.name} 
-                    className="relative group"
-                    onMouseEnter={() => setIsProductsDropdownOpen(true)}
-                    onMouseLeave={() => setIsProductsDropdownOpen(false)}
-                  >
-                    <Link
-                      href={link.href}
-                      className={`px-3 py-2 text-xs xl:text-sm font-semibold tracking-wide transition-colors flex items-center gap-1 ${
-                        isActive ? "text-[#d97706] border-b-2 border-[#092b63]" : "text-[#d97706] hover:text-[#092b63]"
-                      }`}
-                    >
-                      {link.name}
-                      <ChevronDown className="w-3.5 h-3.5 text-slate-400 group-hover:rotate-180 transition-transform duration-200" />
-                    </Link>
-
-                    {/* Dropdown Menu */}
-                    <div className={`absolute top-full left-0 w-80 pt-2 transition-all duration-200 ${
-                      isProductsDropdownOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2 pointer-events-none"
-                    }`}>
-                      <div className="bg-white rounded-2xl shadow-xl border border-slate-100 p-3 space-y-1">
-                        <div className="px-3 py-2 text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                          Product Categories
-                        </div>
-                        {PRODUCT_CATEGORIES.map((cat) => (
-                          <Link
-                            key={cat.slug}
-                            href={`/products/${cat.slug}`}
-                            className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-amber-50/70 transition-colors group/item"
-                          >
-                            <div className="p-2 rounded-lg bg-slate-100 group-hover/item:bg-white transition-colors">
-                              {getCategoryIcon(cat.iconName)}
-                            </div>
-                            <div>
-                              <div className="text-xs font-semibold text-slate-900 group-hover/item:text-[#123f91]">
-                                {cat.title}
-                              </div>
-                              <div className="text-[11px] text-slate-500 line-clamp-1">
-                                {cat.subtitle}
-                              </div>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                );
-              }
 
               return (
                 <Link

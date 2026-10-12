@@ -15,7 +15,7 @@ export async function POST(req: Request) {
 
     const gmailUser = process.env.GMAIL_USER || process.env.EMAIL_USER;
     const gmailPass = process.env.GMAIL_APP_PASSWORD || process.env.EMAIL_PASS;
-    const recipientEmail = process.env.RECIPIENT_EMAIL || "info@priyanpharmaceuticals.com";
+    const recipientEmail = process.env.RECIPIENT_EMAIL || "info@kanishpharmaceuticals.com";
 
     // If SMTP credentials aren't configured in .env yet
     if (!gmailUser || !gmailPass) {
@@ -41,7 +41,7 @@ export async function POST(req: Request) {
       from: `"${name}" <${gmailUser}>`,
       replyTo: email,
       to: recipientEmail,
-      subject: subject ? `Contact Form: ${subject}` : `New Inquiry from ${name} - Priyan Pharmaceuticals`,
+      subject: subject ? `Contact Form: ${subject}` : `New Inquiry from ${name} - KANISH PHARMACEUTICALS PVT LTD.`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px;">
           <h2 style="color: #092b63; border-bottom: 2px solid #3fa56b; padding-bottom: 10px; margin-top: 0;">New Contact Form Message</h2>
@@ -54,7 +54,7 @@ export async function POST(req: Request) {
             <p style="white-space: pre-wrap; color: #333; margin-bottom: 0;">${message}</p>
           </div>
           <hr style="margin-top: 20px; border: none; border-top: 1px solid #eee;" />
-          <p style="font-size: 12px; color: #888; text-align: center;">Sent from Priyan Pharmaceuticals Website Contact Form</p>
+          <p style="font-size: 12px; color: #888; text-align: center;">Sent from KANISH PHARMACEUTICALS PVT LTD. Website Contact Form</p>
         </div>
       `,
     };

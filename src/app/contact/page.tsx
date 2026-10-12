@@ -5,8 +5,8 @@ import { Mail, Phone, MapPin, ChevronRight } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata = {
-  title: "Contact Us | Priyan Pharmaceuticals",
-  description: "Get in touch with Priyan Pharmaceuticals for inquiries, pharmaceutical product quotes, regulatory dossier support, and international supply partnerships.",
+  title: "Contact Us | KANISH PHARMACEUTICALS PVT LTD.",
+  description: "Get in touch with KANISH PHARMACEUTICALS PVT LTD. for inquiries, pharmaceutical product quotes, regulatory dossier support, and international supply partnerships.",
 };
 
 export default function ContactPage() {
@@ -89,11 +89,11 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Email Addresses</h3>
                     <div className="text-sm font-semibold text-slate-800 flex flex-col gap-1">
-                      <a href="mailto:info@priyanpharmaceuticals.com" className="hover:text-emerald-700">
-                        info@priyanpharmaceuticals.com
+                      <a href="mailto:info@kanishpharmaceuticals.com" className="hover:text-emerald-700">
+                        info@kanishpharmaceuticals.com
                       </a>
-                      <a href="mailto:priyanpharmaceuticals@gmail.com" className="hover:text-emerald-700">
-                        priyanpharmaceuticals@gmail.com
+                      <a href="mailto:dharmpatel2111@yahoo.com" className="hover:text-emerald-700">
+                        dharmpatel2111@yahoo.com
                       </a>
                     </div>
                   </div>

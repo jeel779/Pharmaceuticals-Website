@@ -22,10 +22,10 @@ export async function generateMetadata({ params }: Props) {
   if (!category) return {};
 
   return {
-    title: `${category.title} | Priyan Pharmaceuticals Export`,
+    title: `${category.title} | Kanish Pharmaceuticals Pvt. Ltd.`,
     description: category.description,
     openGraph: {
-      title: `${category.title} Exporter | Priyan Pharmaceuticals`,
+      title: `${category.title} Exporter | Kanish Pharmaceuticals Pvt. Ltd.`,
       description: category.fullDescription,
       images: [{ url: category.image }],
     },
@@ -47,7 +47,7 @@ export default async function ProductDetailPage({ params }: Props) {
       {/* Category Hero */}
       <section className="bg-gradient-to-r from-[#092b63] to-[#123f91] text-white py-14 md:py-20">
         <div className="container-custom">
-          
+
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-xs text-slate-300 mb-4">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
@@ -72,7 +72,7 @@ export default async function ProductDetailPage({ params }: Props) {
       <section className="py-16 bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            
+
             {/* Left Image & Overview */}
             <div className="lg:col-span-7 space-y-8">
               <div className="image-wrapper rounded-3xl overflow-hidden shadow-xl border-4 border-slate-100">
@@ -126,7 +126,7 @@ export default async function ProductDetailPage({ params }: Props) {
 
             {/* Right Sidebar: Documentation & Enquiry Trigger */}
             <div className="lg:col-span-5 space-y-6">
-              
+
               <CategoryDetailClient categorySlug={category.slug} categoryTitle={category.title} />
 
               {/* Technical Documentation Support Card */}

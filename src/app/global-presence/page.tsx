@@ -4,8 +4,8 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
 export const metadata = {
-  title: "Global Presence | Priyan Pharmaceuticals",
-  description: "OUR BUSINESS - Asia, Africa, MENA and CIS. Priyan Pharmaceuticals supports international distributors, hospitals, and pharmaceutical importers with reliable export coordination and supply logistics.",
+  title: "Global Presence | KANISH PHARMACEUTICALS PVT LTD.",
+  description: "OUR BUSINESS - Asia, Africa, MENA and CIS. KANISH PHARMACEUTICALS PVT LTD. supports international distributors, hospitals, and pharmaceutical importers with reliable export coordination and supply logistics.",
 };
 
 export default function GlobalPresencePage() {
@@ -64,7 +64,7 @@ export default function GlobalPresencePage() {
           <div className="relative max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-white p-2 mt-6">
             <Image
               src="/images/World_location_map.jpg"
-              alt="Priyan Global Presence World Location Map"
+              alt="Kanish Global Presence World Location Map"
               width={1200}
               height={600}
               className="w-full h-auto object-contain rounded-xl"

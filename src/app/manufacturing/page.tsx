@@ -4,8 +4,8 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
 export const metadata = {
-  title: "Manufacturing | Priyan Pharmaceuticals",
-  description: "Priyan manufacturing mindset is quality first and quantity second. State of the art manufacturing facility equipped with high tech machinery for Tablets, Capsules, Injections, MDS, Syrups and Suspensions.",
+  title: "Manufacturing | KANISH PHARMACEUTICALS PVT LTD.",
+  description: "Kanish manufacturing mindset is quality first and quantity second. State of the art manufacturing facility equipped with high tech machinery for Tablets, Capsules, Injections, MDS, Syrups and Suspensions.",
 };
 
 export default function ManufacturingPage() {
@@ -64,7 +64,7 @@ export default function ManufacturingPage() {
         <div className="container-custom max-w-4xl mx-auto text-center space-y-5">
           
           <p className="text-base md:text-lg text-slate-600 font-medium leading-relaxed max-w-3xl mx-auto">
-            Priyan manufacturing mindset is quality first and quantity second. We work to the most complex of customer requirements.
+            Kanish manufacturing mindset is quality first and quantity second. We work to the most complex of customer requirements.
           </p>
 
           {/* Heartline image divider */}

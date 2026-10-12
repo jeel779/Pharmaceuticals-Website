@@ -12,32 +12,32 @@ export default function HomePage() {
     {
       src: "/images/home/holding-medicines.jpg",
       title: "Cost effectiveness Our mission to do available cost-effective products across the globe",
-      subhead: "Your Health is our mission",
+      subhead: "Healthy horizons for all",
     },
     {
       src: "/images/home/stock-photo-pharmacy.jpg",
       title: "Quality Formulations & Global Export Reach",
-      subhead: "Your Health is our mission",
+      subhead: "Healthy horizons for all",
     },
     {
       src: "/images/home/laboratory.jpg",
       title: "Rigorous Quality Compliance & Regulatory Excellence",
-      subhead: "Your Health is our mission",
+      subhead: "Healthy horizons for all",
     },
     {
       src: "/images/home/medications.jpg",
       title: "Comprehensive Healthcare Solutions Worldwide",
-      subhead: "Your Health is our mission",
+      subhead: "Healthy horizons for all",
     },
     {
       src: "/images/home/indiagate.jpg",
       title: "Premier Pharmaceutical Export Partner From India",
-      subhead: "Your Health is our mission",
+      subhead: "Healthy horizons for all",
     },
     {
       src: "/images/home/stock-photo-top-view-angle-jar-pills-some-which-spilled-out-white.jpg",
       title: "Trusted Healthcare Sourcing & Distribution",
-      subhead: "Your Health is our mission",
+      subhead: "Healthy horizons for all",
     },
   ];
 
@@ -148,14 +148,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. WELCOME TO PRIYAN PHARMACEUTICALS SECTION */}
+      {/* 2. WELCOME TO KANISH PHARMACEUTICALS PVT LTD. SECTION */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container-custom max-w-4xl mx-auto text-center space-y-6">
           
           {/* Section Header with section-img.png heartline divider */}
           <div className="space-y-2">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#092b63] tracking-wide uppercase">
-              WELCOME TO PRIYAN PHARMACEUTICALS
+              WELCOME TO KANISH PHARMACEUTICALS PVT LTD.
             </h2>
             
             {/* Heartline section image divider */}
@@ -170,7 +170,7 @@ export default function HomePage() {
             </div>
 
             <p className="text-xs sm:text-sm font-semibold text-slate-500 tracking-wider uppercase">
-              Your Health is our mission
+              Healthy horizons for all
             </p>
           </div>
 
@@ -182,13 +182,13 @@ export default function HomePage() {
             
             <div className="space-y-5 text-sm sm:text-base text-slate-600 leading-relaxed text-justify">
               <p>
-                Priyan Pharmaceuticals is a professionally managed and dynamic organization, engaged in the pharmaceutical business involving to export pharmaceutical finished products, nutraceutical/food supplements, cosmetics, surgical products and also raw material – API, Excipients, pellets, and intermediates etc. With a desire of providing opportunities for a better life, we work very hard to bring supreme quality products to our customers with regulatory compliance and cost effective
+                KANISH PHARMACEUTICALS PVT LTD. is a professionally managed and dynamic organization, engaged in the pharmaceutical business involving to export pharmaceutical finished products, nutraceutical/food supplements, cosmetics, surgical products and also raw material – API, Excipients, pellets, and intermediates etc. With a desire of providing opportunities for a better life, we work very hard to bring supreme quality products to our customers with regulatory compliance and cost effective
               </p>
               <p>
                 We have instilled a level of trust and confidence amongst our clients by supplying the best quality products to its esteemed patrons. Our products will be available in the various parts of the different country and we are committed to further increasing global access for cost effective healthcare. We venture to make products available to everyone and everywhere.
               </p>
               <p>
-                Priyan Pharmaceuticals is registered with Gujarat State FDA (Food and Drug Administration) under Drugs and Cosmetics and register with Udyam Aadhar (MSME). It also follows all international regulatory standard while providing service to globally presented client. We believe in sustainable growth & innovative solution.
+                KANISH PHARMACEUTICALS PVT LTD. is registered with Gujarat State FDA (Food and Drug Administration) under Drugs and Cosmetics and register with Udyam Aadhar (MSME). It also follows all international regulatory standard while providing service to globally presented client. We believe in sustainable growth & innovative solution.
               </p>
               <p>
                 All the pharmaceutical products that we export are manufactured at our appropriate regulatory approved partner manufacturing sites We are committed to offer you wide variety of quality products from various manufacturers of repute in India, along with all technical documents required by customer as per demand.
@@ -199,13 +199,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. PRIYAN ACROSS GLOBAL SECTION (WORLD MAP) */}
+      {/* 3. KANISH ACROSS GLOBAL SECTION (WORLD MAP) */}
       <section className="py-12 md:py-20 bg-slate-50 border-t border-slate-200">
         <div className="container-custom text-center space-y-8">
           
           <div className="space-y-2">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#092b63] uppercase tracking-wide">
-              Priyan across global
+              Kanish across global
             </h2>
             <p className="text-xs sm:text-sm font-semibold text-slate-500 uppercase tracking-wider">
               Expanding Healthcare Reach & Cost-Effective Supply Chain
@@ -216,7 +216,7 @@ export default function HomePage() {
           <div className="relative max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-white p-2">
             <Image
               src="/images/World_location_map.jpg"
-              alt="Priyan Across Global Map"
+              alt="Kanish Across Global Map"
               width={1200}
               height={600}
               className="w-full h-auto object-contain rounded-xl"

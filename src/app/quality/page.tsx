@@ -4,8 +4,8 @@ import Link from "next/link";
 import { ShieldCheck, CheckCircle2, FileCheck, Award, Microscope, ClipboardCheck, ArrowRight, ChevronRight } from "lucide-react";
 
 export const metadata = {
-  title: "Quality & Compliance | Priyan Pharmaceuticals",
-  description: "Learn about Priyan Pharmaceuticals' commitment to quality assurance, regulatory documentation, CTD dossier support, and regulatory-approved manufacturing partners.",
+  title: "Quality & Compliance | KANISH PHARMACEUTICALS PVT LTD.",
+  description: "Learn about KANISH PHARMACEUTICALS PVT LTD.' commitment to quality assurance, regulatory documentation, CTD dossier support, and regulatory-approved manufacturing partners.",
 };
 
 export default function QualityPage() {
@@ -48,7 +48,7 @@ export default function QualityPage() {
                 Committed to Quality and Compliance
               </h2>
               <p className="text-sm md:text-base text-[#667085] leading-relaxed">
-                Products exported by Priyan Pharmaceuticals are manufactured at appropriate regulatory-approved partner manufacturing sites operating under stringent quality control procedures.
+                Products exported by KANISH PHARMACEUTICALS PVT LTD. are manufactured at appropriate regulatory-approved partner manufacturing sites operating under stringent quality control procedures.
               </p>
               <p className="text-sm md:text-base text-[#667085] leading-relaxed">
                 We work closely with audited manufacturing partners to ensure all supplied batches conform to international pharmacopoeial standards such as USP, BP, and EP. Technical documents and quality reports can be provided based on customer and market-specific regulatory requirements.

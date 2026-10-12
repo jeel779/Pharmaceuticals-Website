@@ -19,13 +19,20 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://priyanpharmaceuticals.com"),
+  metadataBase: new URL("https://kanishpharmaceuticals.com"),
   title: {
-    default: "Priyan Pharmaceuticals | Pharmaceutical Exporter from India",
-    template: "%s | Priyan Pharmaceuticals",
+    default: "Kanish Pharmaceuticals Pvt. Ltd. | Pharmaceutical Exporter from India",
+    template: "%s | Kanish Pharmaceuticals Pvt. Ltd.",
   },
   description:
-    "Priyan Pharmaceuticals supplies pharmaceutical, nutraceutical, cosmetic, surgical, API, and healthcare products to global markets. Sourced from regulatory-approved partner manufacturing sites.",
+    "Kanish Pharmaceuticals Pvt. Ltd. supplies pharmaceutical, nutraceutical, cosmetic, surgical, API, and healthcare products to global markets. Sourced from regulatory-approved partner manufacturing sites.",
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   keywords: [
     "Pharmaceutical Exporter India",
     "Pharma Export Company India",
@@ -37,18 +44,18 @@ export const metadata: Metadata = {
     "Pharmaceutical Pellets",
     "WHO-GMP Manufacturer Partner"
   ],
-  authors: [{ name: "Priyan Pharmaceuticals" }],
+  authors: [{ name: "Kanish Pharmaceuticals Pvt. Ltd." }],
   openGraph: {
-    title: "Priyan Pharmaceuticals | Pharmaceutical Exporter from India",
+    title: "Kanish Pharmaceuticals Pvt. Ltd. | Pharmaceutical Exporter from India",
     description: "Quality pharmaceutical, nutraceutical, cosmetic, surgical, API, and intermediate products for global healthcare markets.",
-    url: "https://priyanpharmaceuticals.com",
-    siteName: "Priyan Pharmaceuticals",
+    url: "https://kanishpharmaceuticals.com",
+    siteName: "Kanish Pharmaceuticals Pvt. Ltd.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Priyan Pharmaceuticals",
+    title: "Kanish Pharmaceuticals Pvt. Ltd.",
     description: "Quality healthcare products for global markets.",
   },
   robots: {
@@ -65,10 +72,10 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Priyan Pharmaceuticals",
-    "alternateName": "Priyan Pharma",
-    "url": "https://priyanpharmaceuticals.com",
-    "logo": "https://priyanpharmaceuticals.com/images/hero_pharma_lab.jpg",
+    "name": "KANISH PHARMACEUTICALS PVT LTD.",
+    "alternateName": "Kanish Pharmaceuticals",
+    "url": "https://kanishpharmaceuticals.com",
+    "logo": "https://kanishpharmaceuticals.com/images/logo.png",
     "description": "Professionally managed Indian organization engaged in the export of pharmaceutical finished products, nutraceuticals, cosmetics, surgical products, APIs, excipients, pellets, and intermediates.",
     "address": {
       "@type": "PostalAddress",
@@ -76,7 +83,7 @@ export default function RootLayout({
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "email": "info@priyanpharmaceuticals.com",
+      "email": "info@kanishpharmaceuticals.com",
       "contactType": "export desk",
       "areaServed": "Global"
     }
@@ -85,6 +92,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

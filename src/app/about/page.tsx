@@ -4,8 +4,8 @@ import Link from "next/link";
 import { Check, ChevronRight } from "lucide-react";
 
 export const metadata = {
-  title: "About Us | Priyan Pharmaceuticals",
-  description: "Learn about Priyan Pharmaceuticals, a professionally managed organization engaged in exporting pharmaceutical finished products, nutraceuticals, cosmetics, surgical products, APIs, and intermediates.",
+  title: "About Us | KANISH PHARMACEUTICALS PVT LTD.",
+  description: "Learn about KANISH PHARMACEUTICALS PVT LTD., a professionally managed organization engaged in exporting pharmaceutical finished products, nutraceuticals, cosmetics, surgical products, APIs, and intermediates.",
 };
 
 export default function AboutPage() {
@@ -45,13 +45,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 2. WELCOME TO PRIYAN PHARMACEUTICALS SECTION */}
+      {/* 2. WELCOME TO KANISH PHARMACEUTICALS PVT LTD. SECTION */}
       <section className="py-14 md:py-20 bg-white">
         <div className="container-custom max-w-4xl mx-auto text-center space-y-6">
           
           <div className="space-y-2">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#092b63] tracking-wide uppercase">
-              WELCOME TO PRIYAN PHARMACEUTICALS
+              WELCOME TO KANISH PHARMACEUTICALS PVT LTD.
             </h2>
             
             {/* Heartline image divider */}
@@ -66,19 +66,19 @@ export default function AboutPage() {
             </div>
 
             <p className="text-xs sm:text-sm font-semibold text-slate-500 tracking-wider uppercase">
-              Your Health is our mission
+              Healthy horizons for all
             </p>
           </div>
 
           <div className="text-left space-y-5 text-sm sm:text-base text-slate-600 leading-relaxed text-justify pt-4">
             <p>
-              Priyan Pharmaceuticals is a professionally managed and dynamic organization, engaged in the pharmaceutical business involving to export pharmaceutical finished products, nutraceutical/food supplements, cosmetics, surgical products and also raw material – API, Excipients, pellets, and intermediates etc. With a desire of providing opportunities for a better life, we work very hard to bring supreme quality products to our customers with regulatory compliance and cost effective.
+              KANISH PHARMACEUTICALS PVT LTD. is a professionally managed and dynamic organization, engaged in the pharmaceutical business involving to export pharmaceutical finished products, nutraceutical/food supplements, cosmetics, surgical products and also raw material – API, Excipients, pellets, and intermediates etc. With a desire of providing opportunities for a better life, we work very hard to bring supreme quality products to our customers with regulatory compliance and cost effective.
             </p>
             <p>
               We have instilled a level of trust and confidence amongst our clients by supplying the best quality products to its esteemed patrons. Our products will be available in the various parts of the different country and we are committed to further increasing global access for cost effective healthcare. We venture to make products available to everyone and everywhere.
             </p>
             <p>
-              Priyan Pharmaceuticals is registered with Gujarat State FDA (Food and Drug Administration) under Drugs and Cosmetics and register with Udyam Aadhar (MSME). It also follows all international regulatory standard while providing service to globally presented client. We believe in sustainable growth & innovative solution.
+              KANISH PHARMACEUTICALS PVT LTD. is registered with Gujarat State FDA (Food and Drug Administration) under Drugs and Cosmetics and register with Udyam Aadhar (MSME). It also follows all international regulatory standard while providing service to globally presented client. We believe in sustainable growth & innovative solution.
             </p>
             <p>
               All the pharmaceutical products that we export are manufactured at our appropriate regulatory approved partner manufacturing sites We are committed to offer you wide variety of quality products from various manufacturers of repute in India, along with all technical documents required by customer as per demand.
@@ -98,7 +98,7 @@ export default function AboutPage() {
               <div className="relative w-full max-w-lg rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-white p-2">
                 <Image
                   src="/images/why chose us.webp"
-                  alt="Why Choose Priyan Pharmaceuticals"
+                  alt="Why Choose KANISH PHARMACEUTICALS PVT LTD."
                   width={600}
                   height={400}
                   className="w-full h-auto object-contain rounded-xl"

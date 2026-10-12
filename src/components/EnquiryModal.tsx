@@ -335,7 +335,7 @@ const EnquiryModalDialog: React.FC<ModalProps> = ({ isOpen, selectedCategory, on
                     className="mt-1 rounded border-slate-300 text-blue-700 focus:ring-blue-600"
                   />
                   <span className="text-xs text-slate-600 leading-relaxed">
-                    I agree to allow Priyan Pharmaceuticals to store and process my business details to respond to this B2B export enquiry.
+                    I agree to allow KANISH PHARMACEUTICALS PVT LTD. to store and process my business details to respond to this B2B export enquiry.
                   </span>
                 </label>
                 {errors.consent && <p className="text-xs text-red-600 mt-1">{errors.consent}</p>}

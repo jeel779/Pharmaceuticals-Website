@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { PRODUCT_CATEGORIES } from '@/data/products';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://priyanpharmaceuticals.com';
+  const baseUrl = 'https://kanishpharmaceuticals.com';
 
   const staticRoutes = [
     '',
