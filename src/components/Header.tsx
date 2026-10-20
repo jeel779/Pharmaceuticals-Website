@@ -54,7 +54,7 @@ export const Header: React.FC = () => {
         <div className="container-custom flex items-center justify-end gap-6">
           <div className="flex items-center gap-1.5 hover:text-[#b45309] transition-colors">
             <Phone className="w-3.5 h-3.5 text-[#092b63]" />
-            <a href="tel:+919727250640">+91 9727250640</a>, <a href="tel:+919016808536">+91 9016808536</a>
+            <a href="tel:+919106789609">+91 9106789609</a>
           </div>
           <div className="flex items-center gap-1.5 hover:text-[#b45309] transition-colors">
             <Mail className="w-3.5 h-3.5 text-[#092b63]" />

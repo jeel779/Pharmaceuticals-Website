@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Phone, MapPin, ChevronRight } from "lucide-react";
+import { Mail, Phone, MapPin, ChevronRight, User } from "lucide-react";
 import { ContactForm } from "@/components/ContactForm";
 
 export const metadata = {
@@ -59,25 +59,36 @@ export default function ContactPage() {
               <div className="space-y-4">
                 <div className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex items-start gap-4">
                   <div className="p-3 rounded-xl bg-amber-50 text-[#d97706] shrink-0">
-                    <MapPin className="w-6 h-6" />
+                    <User className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Corporate Address</h3>
-                    <p className="text-sm font-semibold text-slate-800 leading-snug">
-                      13 FF, Komal park Co-operative Society, B/S Gyangita primary school, Nr. Chappaya Appartment, Parshwanath Township, Nava Naroda, Ahmedabad-382346, Gujarat, India.
+                    <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Contact Person</h3>
+                    <p className="text-base font-bold text-slate-800 leading-snug">
+                      B.K Patel
                     </p>
                   </div>
                 </div>
 
                 <div className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex items-start gap-4">
                   <div className="p-3 rounded-xl bg-blue-50 text-[#092b63] shrink-0">
+                    <MapPin className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Corporate Office Address</h3>
+                    <p className="text-sm font-semibold text-slate-800 leading-snug">
+                      7, third floor, Shukh Sagar complex, opposite:  Dinesh chember, Bapunagar, ahmedabad- 380024
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex items-start gap-4">
+                  <div className="p-3 rounded-xl bg-emerald-50 text-[#092b63] shrink-0">
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Phone / WhatsApp</h3>
-                    <div className="text-sm font-semibold text-slate-800 space-x-2">
-                      <a href="tel:+919727250640" className="hover:text-[#092b63]">+91 9727250640</a>,
-                      <a href="tel:+919016808536" className="hover:text-[#092b63]">+91 9016808536</a>
+                    <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Contact No.</h3>
+                    <div className="text-sm font-semibold text-slate-800">
+                      <a href="tel:+919106789609" className="hover:text-[#092b63]">+91 9106789609</a>
                     </div>
                   </div>
                 </div>

@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Mail, Phone, MapPin, ChevronUp, ChevronRight } from "lucide-react";
+import { Mail, Phone, MapPin, ChevronUp, ChevronRight, User } from "lucide-react";
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -91,17 +91,22 @@ export const Footer: React.FC = () => {
               CONTACT US
             </h3>
             <ul className="space-y-3.5 text-sm text-slate-200">
+              <li className="flex items-center gap-3">
+                <User className="w-5 h-5 text-amber-400 shrink-0" />
+                <span className="leading-snug">
+                  Contact person: <strong className="font-semibold text-white">B.K Patel</strong>
+                </span>
+              </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
                 <span className="leading-snug">
-                  13 FF, Komal park Co-operative Society, B/S Gyangita primary school, Nr. Chappaya Appartment, Parshwanath Township, Nava Naroda, Ahmedabad-382346, Gujarat, India.
+                  7, third floor, Shukh Sagar complex, opposite:  Dinesh chember, Bapunagar, ahmedabad- 380024
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-amber-400 shrink-0" />
                 <div className="flex flex-wrap items-center gap-1">
-                  <a href="tel:+919727250640" className="hover:text-amber-300 transition-colors">+91 9727250640</a>,
-                  <a href="tel:+919016808536" className="hover:text-amber-300 transition-colors">+91 9016808536</a>
+                  <a href="tel:+919106789609" className="hover:text-amber-300 transition-colors">+91 9106789609</a>
                 </div>
               </li>
               <li className="flex items-start gap-3">

@@ -82,10 +82,15 @@ export default function RootLayout({
     "description": "Professionally managed Indian organization engaged in the export of pharmaceutical finished products, nutraceuticals, cosmetics, surgical products, APIs, excipients, pellets, and intermediates.",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "7, third floor, Shukh Sagar complex, opposite:  Dinesh chember, Bapunagar",
+      "addressLocality": "Ahmedabad",
+      "postalCode": "380024",
+      "addressRegion": "Gujarat",
       "addressCountry": "India"
     },
     "contactPoint": {
       "@type": "ContactPoint",
+      "telephone": "+91 9106789609",
       "email": "info@kanishpharmaceuticals.com",
       "contactType": "export desk",
       "areaServed": "Global"
