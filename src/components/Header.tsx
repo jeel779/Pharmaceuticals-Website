@@ -74,9 +74,9 @@ export const Header: React.FC = () => {
             <Image
               src="/images/logo.png"
               alt="KANISH PHARMACEUTICALS PVT LTD. Logo"
-              width={220}
-              height={55}
-              className="h-10 md:h-12 w-auto object-contain"
+              width={557}
+              height={557}
+              className="h-16 md:h-[75px] min-w-[60px] md:min-w-[75px] w-auto object-contain"
               priority
             />
           </Link>
