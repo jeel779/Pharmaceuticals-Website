@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CheckCircle2, FileCheck, ShieldCheck, ArrowRight, Send, ChevronRight, Layers } from "lucide-react";
-import { PRODUCT_CATEGORIES, ProductCategory } from "@/data/products";
+import { CheckCircle2, ChevronRight, Phone, Mail, ArrowRight, ShieldCheck, Layers, Sparkles } from "lucide-react";
+import { PRODUCT_CATEGORIES } from "@/data/products";
 import { CategoryDetailClient } from "./CategoryDetailClient";
 
 interface Props {
@@ -22,10 +22,10 @@ export async function generateMetadata({ params }: Props) {
   if (!category) return {};
 
   return {
-    title: `${category.title} | Kanish Pharmaceuticals Pvt. Ltd.`,
+    title: `${category.title} | KANISH PHARMACEUTICALS PVT LTD.`,
     description: category.description,
     openGraph: {
-      title: `${category.title} Exporter | Kanish Pharmaceuticals Pvt. Ltd.`,
+      title: `${category.title} Exporter | KANISH PHARMACEUTICALS PVT LTD.`,
       description: category.fullDescription,
       images: [{ url: category.image }],
     },
@@ -40,129 +40,186 @@ export default async function ProductDetailPage({ params }: Props) {
     notFound();
   }
 
-  const otherCategories = PRODUCT_CATEGORIES.filter((c) => c.slug !== category.slug);
+  // Filter other categories to allow fast switching
+  const otherCategories = PRODUCT_CATEGORIES.filter((c) => c.slug !== category.slug).slice(0, 4);
 
   return (
-    <div className="w-full">
-      {/* Category Hero */}
-      <section className="bg-gradient-to-r from-[#092b63] to-[#123f91] text-white py-14 md:py-20">
-        <div className="container-custom">
+    <div className="w-full bg-white text-slate-800">
+      {/* 1. HERO BREADCRUMB BANNER (IDENTICAL CONSISTENT STYLE ACROSS ALL PAGES) */}
+      <section className="relative w-full h-[180px] sm:h-[220px] md:h-[250px] bg-[#092b63] text-white overflow-hidden flex items-center justify-center">
+        <Image
+          src="/images/background image.jpg"
+          alt="Products Banner Background"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-35"
+        />
+        <div className="absolute inset-0 bg-[#092b63]/80" />
 
-          {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-xs text-slate-300 mb-4">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <Link href="/products" className="hover:text-white transition-colors">Products</Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-emerald-400 font-semibold">{category.title}</span>
-          </div>
-
-          <div className="max-w-3xl space-y-3">
-            <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
-              {category.title}
-            </h1>
-            <p className="text-base md:text-lg text-slate-200">
-              {category.subtitle}
-            </p>
+        <div className="container-custom relative z-20 text-center space-y-2">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold !text-white tracking-wider uppercase drop-shadow-[0_4px_8px_rgba(0,0,0,0.9)]">
+            {category.title}
+          </h1>
+          <div className="flex items-center justify-center gap-2 text-xs sm:text-sm text-white font-semibold uppercase tracking-wider flex-wrap">
+            <Link href="/" className="text-white hover:text-amber-400 transition-colors">
+              HOME
+            </Link>
+            <ChevronRight className="w-4 h-4 text-amber-400 shrink-0" />
+            <Link href="/products" className="text-white hover:text-amber-400 transition-colors">
+              PRODUCTS
+            </Link>
+            <ChevronRight className="w-4 h-4 text-amber-400 shrink-0" />
+            <span className="text-amber-400 font-bold truncate max-w-[200px] sm:max-w-none">
+              {category.title.toUpperCase()}
+            </span>
           </div>
         </div>
       </section>
 
-      {/* Main Category Content */}
-      <section className="py-16 bg-white">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      {/* 2. SECTION HEADER WITH TITLE & DIVIDER */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container-custom max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12 space-y-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#092b63] tracking-wide uppercase">
+              {category.title}
+            </h2>
 
-            {/* Left Image & Overview */}
+            {/* Heartline divider matching site design */}
+            <div className="flex justify-center py-1">
+              <Image
+                src="/images/section-img.png"
+                alt="Divider"
+                width={80}
+                height={24}
+                className="h-5 w-auto object-contain"
+              />
+            </div>
+
+            <p className="text-xs sm:text-sm font-semibold text-slate-500 tracking-wider uppercase">
+              {category.subtitle}
+            </p>
+          </div>
+
+          {/* 3. MAIN PRODUCT DETAILS & SIDEBAR INQUIRY GRID */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            
+            {/* Left Content (Image, Description, Formulations, Categories) */}
             <div className="lg:col-span-7 space-y-8">
-              <div className="image-wrapper rounded-3xl overflow-hidden shadow-xl border-4 border-slate-100">
+              
+              {/* Product Featured Image Card */}
+              <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm bg-slate-50">
                 <Image
                   src={category.image}
                   alt={category.title}
-                  width={800}
-                  height={500}
-                  className="w-full h-[380px] md:h-[460px] object-cover"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 60vw"
+                  className="object-cover"
                 />
               </div>
 
-              <div>
-                <h2 className="text-2xl font-bold text-slate-900 mb-3">Category Overview</h2>
-                <p className="text-sm md:text-base text-[#667085] leading-relaxed">
+              {/* Product Overview */}
+              <div className="p-6 md:p-8 rounded-2xl bg-slate-50/60 border border-slate-200/80 space-y-3">
+                <h3 className="text-xl font-bold text-[#092b63] flex items-center gap-2">
+                  <ShieldCheck className="w-5 h-5 text-[#3fa56b]" />
+                  Product Overview
+                </h3>
+                <p className="text-sm md:text-base text-slate-600 leading-relaxed text-justify sm:text-left">
                   {category.fullDescription}
                 </p>
               </div>
 
-              {/* Product Types / Dosage Forms */}
-              <div className="p-6 rounded-2xl bg-[#f8fafc] border border-slate-200/80 space-y-4">
-                <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-                  <ShieldCheck className="w-5 h-5 text-[#123f91]" />
-                  Product Types & Dosage Formulations
-                </h3>
-                <div className="grid grid-cols-1 gap-2.5">
-                  {category.productTypes.map((type, idx) => (
-                    <div key={idx} className="flex items-start gap-3 p-3 rounded-xl bg-white border border-slate-100 shadow-2xs">
-                      <CheckCircle2 className="w-5 h-5 text-[#3fa56b] shrink-0 mt-0.5" />
-                      <span className="text-sm font-semibold text-slate-800">{type}</span>
-                    </div>
-                  ))}
+              {/* Available Formulations / Product Types */}
+              {category.productTypes && category.productTypes.length > 0 && (
+                <div className="p-6 md:p-8 rounded-2xl bg-white border border-slate-200/90 shadow-xs space-y-4">
+                  <h3 className="text-lg font-bold text-[#092b63] flex items-center gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-[#3fa56b]" />
+                    Available Formulations & Dosage Forms
+                  </h3>
+                  <div className="grid grid-cols-1 gap-2.5">
+                    {category.productTypes.map((type, idx) => (
+                      <div
+                        key={idx}
+                        className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50/80 border border-slate-100 transition-colors hover:bg-blue-50/40"
+                      >
+                        <CheckCircle2 className="w-4 h-4 text-[#3fa56b] shrink-0 mt-0.5" />
+                        <span className="text-xs sm:text-sm font-semibold text-slate-800">
+                          {type}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
 
               {/* Therapeutic Categories */}
-              <div className="p-6 rounded-2xl bg-white border border-slate-200/80 space-y-4">
-                <h3 className="text-lg font-bold text-slate-900 flex items-center gap-2">
-                  <Layers className="w-5 h-5 text-[#3fa56b]" />
-                  Therapeutic Categories & Applications
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {category.therapeuticCategories.map((tc, idx) => (
-                    <span key={idx} className="px-3.5 py-2 rounded-xl bg-blue-50 text-[#123f91] text-xs font-semibold">
-                      {tc}
-                    </span>
-                  ))}
+              {category.therapeuticCategories && category.therapeuticCategories.length > 0 && (
+                <div className="p-6 md:p-8 rounded-2xl bg-white border border-slate-200/90 shadow-xs space-y-4">
+                  <h3 className="text-lg font-bold text-[#092b63] flex items-center gap-2">
+                    <Layers className="w-5 h-5 text-[#3fa56b]" />
+                    Therapeutic Categories & Segments
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {category.therapeuticCategories.map((tc, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1.5 rounded-lg bg-blue-50/80 text-[#092b63] text-xs font-semibold border border-blue-100"
+                      >
+                        {tc}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
 
-            {/* Right Sidebar: Documentation & Enquiry Trigger */}
-            <div className="lg:col-span-5 space-y-6">
+            {/* Right Sidebar: Quick Direct Inquiry Form & Quick Links */}
+            <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-24">
+              
+              {/* Direct Inquiry Form (Lightweight, No Unnecessary Info, Sends directly to Gmail) */}
+              <CategoryDetailClient
+                categorySlug={category.slug}
+                categoryTitle={category.title}
+              />
 
-              <CategoryDetailClient categorySlug={category.slug} categoryTitle={category.title} />
-
-              {/* Technical Documentation Support Card */}
-              <div className="p-6 rounded-3xl bg-slate-900 text-white space-y-4 shadow-lg">
-                <div className="flex items-center gap-2 text-emerald-400 font-semibold text-xs uppercase tracking-wider">
-                  <FileCheck className="w-4 h-4" /> Technical Documentation
-                </div>
-                <h3 className="text-xl font-bold text-white">Regulatory Support</h3>
-                <p className="text-xs text-slate-300 leading-relaxed">
-                  We support global buyers with comprehensive technical and dossier documentation required for market registration:
-                </p>
-                <ul className="space-y-2 pt-2 border-t border-slate-800 text-xs text-slate-200">
-                  {category.technicalSupport.map((doc, idx) => (
-                    <li key={idx} className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#3fa56b] shrink-0" />
-                      <span>{doc}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Explore Other Categories */}
-              <div className="p-6 rounded-3xl bg-white border border-slate-200/80 space-y-3">
-                <h4 className="text-sm font-bold text-slate-900 uppercase tracking-wider text-xs">
+              {/* Explore Other Products Card */}
+              <div className="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-sm space-y-3">
+                <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider">
                   Other Product Categories
                 </h4>
-                <div className="space-y-2">
+                <div className="space-y-1.5">
                   {otherCategories.map((cat) => (
                     <Link
                       key={cat.slug}
                       href={`/products/${cat.slug}`}
-                      className="block p-2.5 rounded-xl hover:bg-blue-50 text-xs font-semibold text-slate-700 hover:text-[#123f91] transition-colors"
+                      className="flex items-center justify-between p-2.5 rounded-xl hover:bg-slate-50 text-xs sm:text-sm font-semibold text-slate-700 hover:text-[#092b63] transition-colors group"
                     >
-                      {cat.title} →
+                      <span>{cat.title}</span>
+                      <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-[#092b63] group-hover:translate-x-1 transition-all" />
                     </Link>
                   ))}
+                </div>
+              </div>
+
+              {/* Quick Contact Info Card */}
+              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+                <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+                  Direct Contact
+                </h4>
+                <div className="space-y-2 text-xs">
+                  <div className="flex items-center gap-2 text-slate-700">
+                    <Phone className="w-3.5 h-3.5 text-[#092b63]" />
+                    <a href="tel:+919106789609" className="hover:text-[#092b63] font-medium">
+                      +91 9106789609
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-2 text-slate-700">
+                    <Mail className="w-3.5 h-3.5 text-[#092b63]" />
+                    <a href="mailto:info@kanishpharmaceuticals.com" className="hover:text-[#092b63] font-medium">
+                      info@kanishpharmaceuticals.com
+                    </a>
+                  </div>
                 </div>
               </div>
 

@@ -1,11 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ArrowRight } from "lucide-react";
 
 export const metadata = {
   title: "Manufacturing | KANISH PHARMACEUTICALS PVT LTD.",
-  description: "Kanish manufacturing mindset is quality first and quantity second. State of the art manufacturing facility equipped with high tech machinery for Tablets, Capsules, Injections, MDS, Syrups and Suspensions.",
+  description:
+    "Kanish manufacturing mindset is quality first and quantity second. State of the art manufacturing facility equipped with high tech machinery for Tablets, Capsules, Injections, MDS, Syrups and Suspensions.",
 };
 
 export default function ManufacturingPage() {
@@ -13,34 +14,31 @@ export default function ManufacturingPage() {
     {
       title: "Tablets and Capsules",
       image: "/images/manufacturing/Tablets&Capsules.jpg",
-      href: "/products/pharmaceuticals",
     },
     {
       title: "Injections",
       image: "/images/manufacturing/Injections1.jpg",
-      href: "/products/pharmaceuticals",
     },
     {
       title: "MDS",
       image: "/images/manufacturing/MDS1.jpg",
-      href: "/products/surgical-products",
     },
     {
       title: "Syrup and Suspensions",
       image: "/images/manufacturing/Syrup&Suspensions.jpg",
-      href: "/products/pharmaceuticals",
     },
   ];
 
   return (
     <div className="w-full bg-white text-slate-800">
-      
       {/* 1. HERO BREADCRUMB BANNER USING BACKGROUND IMAGE */}
       <section className="relative w-full h-[180px] sm:h-[220px] md:h-[250px] bg-[#092b63] text-white overflow-hidden flex items-center justify-center">
         <Image
           src="/images/background image.jpg"
           alt="Manufacturing Banner Background"
           fill
+          priority
+          sizes="100vw"
           className="object-cover opacity-35"
         />
         <div className="absolute inset-0 bg-[#092b63]/80" />
@@ -62,8 +60,7 @@ export default function ManufacturingPage() {
       {/* 2. INTRO SECTION */}
       <section className="py-14 md:py-20 bg-white">
         <div className="container-custom max-w-4xl mx-auto text-center space-y-5">
-          
-          <p className="text-base md:text-lg text-slate-600 font-medium leading-relaxed max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-slate-700 font-medium leading-relaxed max-w-3xl mx-auto">
             Kanish manufacturing mindset is quality first and quantity second. We work to the most complex of customer requirements.
           </p>
 
@@ -81,39 +78,60 @@ export default function ManufacturingPage() {
           <p className="text-sm md:text-base text-slate-600 leading-relaxed max-w-3xl mx-auto">
             We have state of the art manufacturing facility equipped with high tech machinery and operated by qualified pharma technicians and professionals.
           </p>
-
         </div>
       </section>
 
-      {/* 3. MANUFACTURING CATEGORY CARDS GRID */}
+      {/* 3. MANUFACTURING CATEGORY CARDS GRID (DISPLAY-ONLY, NOT CLICKABLE) */}
       <section className="py-12 md:py-20 bg-slate-50 border-t border-slate-200">
         <div className="container-custom max-w-6xl mx-auto">
+          <div className="text-center mb-10 space-y-2">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#092b63] tracking-wide uppercase">
+              Our Manufacturing Capabilities
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-500 font-medium">
+              Equipped to produce international pharmacopoeial grade formulations
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {categories.map((cat, idx) => (
-              <Link
+              <div
                 key={idx}
-                href={cat.href}
-                className="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+                className="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all duration-300 flex flex-col justify-between"
               >
                 <div className="relative h-48 w-full overflow-hidden bg-slate-100">
                   <Image
                     src={cat.image}
                     alt={cat.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover"
                   />
                 </div>
                 <div className="p-5 text-center bg-white border-t border-slate-100">
-                  <h3 className="text-base font-bold text-[#092b63] group-hover:text-amber-600 transition-colors">
+                  <h3 className="text-base font-bold text-[#092b63]">
                     {cat.title}
                   </h3>
                 </div>
-              </Link>
+              </div>
             ))}
+          </div>
+
+          {/* Call-to-action directing users to Product page if they want to order/inquire */}
+          <div className="mt-14 text-center">
+            <p className="text-xs sm:text-sm text-slate-600 mb-4">
+              Looking to view detailed dosage specifications or place an order?
+            </p>
+            <Link
+              href="/products"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#092b63] hover:bg-[#123f91] text-white font-bold text-xs sm:text-sm transition-all shadow-md hover:shadow-lg"
+            >
+              <span>Explore Products & Place Inquiry</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
-
     </div>
   );
 }
