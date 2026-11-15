@@ -103,8 +103,8 @@ export default function ContactPage() {
                       <a href="mailto:info@kanishpharmaceuticals.com" className="hover:text-emerald-700">
                         info@kanishpharmaceuticals.com
                       </a>
-                      <a href="mailto:dharmpatel2111@yahoo.com" className="hover:text-emerald-700">
-                        dharmpatel2111@yahoo.com
+                      <a href="mailto:kanishpharma@gmail.com" className="hover:text-emerald-700">
+                        kanishpharma@gmail.com
                       </a>
                     </div>
                   </div>

@@ -78,7 +78,7 @@ export default function RootLayout({
     "name": "KANISH PHARMACEUTICALS PVT LTD.",
     "alternateName": "Kanish Pharmaceuticals",
     "url": "https://kanishpharmaceuticals.com",
-    "logo": "https://kanishpharmaceuticals.com/images/logo.png",
+    "logo": "https://kanishpharmaceuticals.com/logo.png",
     "description": "Professionally managed Indian organization engaged in the export of pharmaceutical finished products, nutraceuticals, cosmetics, surgical products, APIs, excipients, pellets, and intermediates.",
     "address": {
       "@type": "PostalAddress",

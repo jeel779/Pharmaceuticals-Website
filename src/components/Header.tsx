@@ -72,7 +72,7 @@ export const Header: React.FC = () => {
           {/* Company Logo Image */}
           <Link href="/" className="flex items-center gap-3 group" onClick={() => setIsMobileMenuOpen(false)}>
             <Image
-              src="/images/logo.png"
+              src="/logo.png"
               alt="KANISH PHARMACEUTICALS PVT LTD. Logo"
               width={557}
               height={557}

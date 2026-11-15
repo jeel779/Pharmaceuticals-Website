@@ -239,7 +239,7 @@ export const COMPANY_INFO = {
   heroSubhead: "Delivering quality pharmaceutical, nutraceutical, cosmetic, surgical, and healthcare products to customers across the globe.",
   contactPerson: "B.K Patel",
   email: "info@kanishpharmaceuticals.com",
-  secondaryEmail: "dharmpatel2111@yahoo.com",
+  secondaryEmail: "kanishpharma@gmail.com",
   phone: "+91 9106789609",
   address: "7, third floor, Shukh Sagar complex, opposite:  Dinesh chember, Bapunagar, ahmedabad- 380024",
   copyrightYear: 2026,
