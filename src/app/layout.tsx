@@ -28,10 +28,15 @@ export const metadata: Metadata = {
     "Kanish Pharmaceuticals Pvt. Ltd. supplies pharmaceutical, nutraceutical, cosmetic, surgical, API, and healthcare products to global markets. Sourced from regulatory-approved partner manufacturing sites.",
   icons: {
     icon: [
-      { url: "/favicon.png", type: "image/png", sizes: "64x64" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16.png", type: "image/png", sizes: "16x16" },
+      { url: "/favicon-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-48.png", type: "image/png", sizes: "48x48" },
+      { url: "/favicon-96.png", type: "image/png", sizes: "96x96" },
+      { url: "/favicon-192.png", type: "image/png", sizes: "192x192" },
     ],
-    shortcut: "/favicon.png",
-    apple: { url: "/favicon.png", sizes: "64x64" },
+    shortcut: "/favicon.ico",
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
   },
   keywords: [
     "Pharmaceutical Exporter India",
